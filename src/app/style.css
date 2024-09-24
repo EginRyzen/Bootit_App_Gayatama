@@ -1,0 +1,58 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* .font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+} */
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* @keyframes colorChange {
+    0% {
+        color: #508a8b;
+    }
+
+    50% {
+        color: #ff6347;
+    }
+
+    100% {
+        color: #508a8b;
+    }
+}
+
+.animate-color {
+    animation: colorChange 5s infinite;
+}
+
+.delay-1 {
+    animation-delay: 0s;
+}
+
+.delay-2 {
+    animation-delay: 0.5s;
+}
+
+.delay-3 {
+    animation-delay: 1s;
+}
+
+.delay-4 {
+    animation-delay: 1.5s;
+}
+
+.delay-5 {
+    animation-delay: 2s;
+}
+
+.delay-6 {
+    animation-delay: 2.5s;
+} */
