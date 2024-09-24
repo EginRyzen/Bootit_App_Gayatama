@@ -108,7 +108,7 @@ export default function Navbar() {
                                                 <div className="dropdown flex text-[#3a3f47] hover:text-black cursor-pointer font-medium text-base tracking-wide hover:bg-[#e6e6e6] py-3 px-5 rounded-sm">
                                                     <span>{item.name}</span>
                                                     <div className="dropdown-menu absolute left-0 mt-5 pt-4 max-h-0 opacity-0 transform -translate-y-5 transition-all duration-500 ease-in-out overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0">
-                                                        <ul className="block w-[250px] bg-transparent border border-gray-200 rounded-lg shadow">
+                                                        <ul className="block w-[250px] bg-white border border-gray-200 rounded-lg shadow">
                                                             {item.submenu.map((subItem) => (
                                                                 <li key={subItem.id} className="pl-3 pr-12 py-3 hover:bg-[#e6e6e6]">
                                                                     <a
