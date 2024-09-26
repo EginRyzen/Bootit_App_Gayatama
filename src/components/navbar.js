@@ -70,7 +70,7 @@ export default function Navbar() {
     return (
         <>
             <nav className={`bg-white sticky shadow z-50 h-16 md:h-20 ${scrollDirection === "down" ? "-top-20" : "top-0"} ransition-all duration-500`}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 md:h-20">
                         <div className="flex items-center">
                             <div className="flex -ml-2">

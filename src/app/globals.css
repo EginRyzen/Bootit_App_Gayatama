@@ -7,3 +7,23 @@
     animation-play-state: paused;
   }
 }
+
+#dibantu-logo {
+  animation: pulse 1s infinite;
+  cursor: pointer;
+  border-radius: 50%;
+  --tw-shadow-color: #BFDBFE66;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(191, 219, 254, 1);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(191, 219, 254, 0);
+  }
+  100% {
+      transform: scale(1);ox-shadow: 0 0 0 0 rgba(191, 219, 254, 0);
+  }
+}
