@@ -30,7 +30,7 @@ function HomePage() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+                    dots: true,
                 }
             },
             {
@@ -38,14 +38,18 @@ function HomePage() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
+                    initialSlide: 2,
+                    nextArrow: null,  // Menghilangkan tombol next
+                    prevArrow: null,  // Menghilangkan tombol prev
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    nextArrow: null,  // Menghilangkan tombol next
+                    prevArrow: null,  // Menghilangkan tombol prev
                 }
             }
         ]
@@ -64,29 +68,29 @@ function HomePage() {
         <>
             <main>
                 {/* Banner */}
-                <Banner/>
+                <Banner />
 
                 {/* section */}
-                <LearningPath/>
+                <LearningPath />
 
                 {/* SlideShow */}
-                <SlideLogo/>
+                <SlideLogo />
 
                 {/* About Boot.IT */}
-                <About/>
+                <About />
 
                 {/* Slide Card */}
-                <SlideCard settings={settings} Slider={Slider}/>
+                <SlideCard settings={settings} Slider={Slider} />
 
                 {/* Question */}
-                <Questions toggleAccordion={toggleAccordion} openIndex={openIndex}/>
+                <Questions toggleAccordion={toggleAccordion} openIndex={openIndex} />
 
 
                 {/* Let`s Join */}
-                <Join/>
+                <Join />
 
                 {/* Chat Bot */}
-                <Chatbot/>
+                <Chatbot />
 
 
             </main>

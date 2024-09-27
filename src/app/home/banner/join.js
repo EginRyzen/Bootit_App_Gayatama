@@ -3,10 +3,10 @@ import React from 'react'
 function Join() {
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-            <div className="w-full p-4 text-center border rounded-lg shadow sm:p-8 bg-gray-800 border-gray-700">
-                <h5 className="mb-2 text-3xl font-bold dark:text-white">What are you waiting for?</h5>
+            <div className="w-full p-8 text-center border rounded-lg shadow sm:p-8 bg-gray-800 border-gray-700">
+                <h5 className="mb-2 text-xl md:text-3xl font-bold dark:text-white">What are you waiting for?</h5>
                 <div className="w-3/5 mx-auto">
-                    <p className="mb-10 text-base sm:text-sm text-white">Learn more focused by attending classes and meet ups</p>
+                    <p className="mb-10 text-sm md:text-base sm:text-sm text-white">Learn more focused by attending classes and meet ups</p>
                 </div>
                 <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
                     <a href="" type="button"

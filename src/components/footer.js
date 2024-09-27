@@ -8,9 +8,9 @@ function Footer() {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0 w-2/5">
                         <a href="https://flowbite.com/" className="flex items-center">
-                        <span className="text-[#508a8b] mb-0 sm:self-end text-sm sm:text-3xl font-bold whitespace-nowrap">Boot.<span className="text-[#3a3f47]">IT</span></span>
+                        <span className="text-[#508a8b] mb-0 sm:self-end text-2xl sm:text-3xl font-bold whitespace-nowrap">Boot.<span className="text-[#3a3f47]">IT</span></span>
                         </a>
-                        <p className="text-[#3a3f47] text-sm mt-2">
+                        <p className="text-[#3a3f47] text-xs sm:text-sm mt-2">
                         Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis atau presentasi visual seperti font, tipografi, dan tata letak.
                         </p>
                     </div>
