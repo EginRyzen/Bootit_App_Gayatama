@@ -1,6 +1,6 @@
 import React from 'react';
 
-function registerModal({ isOpenModalRegister, closeModalRegister }) {
+function registerModal({ isOpenModalRegister, closeModalRegister, openModalLogin }) {
     return (
         <>
             {/* Tetete */}
@@ -19,7 +19,7 @@ function registerModal({ isOpenModalRegister, closeModalRegister }) {
                     <div className="relative bg-white rounded-lg shadow">
                         {/* Modal header */}
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
-                            <h3 className="text-lg font-medium text-[#3d3d3d]">REgitser in to our platform</h3>
+                            <h3 className="text-lg font-medium text-[#3d3d3d]">Regitser in to our platform</h3>
                             <button
                                 onClick={closeModalRegister}
                                 type="button"
@@ -48,7 +48,7 @@ function registerModal({ isOpenModalRegister, closeModalRegister }) {
                         {/* Modal body */}
                         <div className="p-4 md:p-5">
                             <form className="space-y-4" action="#">
-                            <div>
+                                <div>
                                     <label
                                         htmlFor="text"
                                         className="block mb-2 text-sm font-medium text-[#3d3d3d]"
@@ -113,25 +113,22 @@ function registerModal({ isOpenModalRegister, closeModalRegister }) {
                                             Remember me
                                         </label>
                                     </div>
-                                    <a href="#" className="text-sm hover:underline text-blue-500">
-                                        Lost Password?
-                                    </a>
                                 </div>
                                 <button
                                     type="submit"
                                     className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-sm text-sm px-5 py-2.5 text-center bg-gray-600"
                                 >
-                                    Login to your account
+                                    Create an account
                                 </button>
 
                                 <div className="flex justify-center gap-5 items-center">
                                     <div className='w-2/5'>
-                                    <hr/>
+                                        <hr />
                                     </div>
-                                <div className="text-sm text-center font-medium text-[#3d3d3d]">Atau</div>
-                                <div className='w-2/5'>
-                                    <hr/>
-                                </div>
+                                    <div className="text-sm text-center font-medium text-[#3d3d3d]">Atau</div>
+                                    <div className='w-2/5'>
+                                        <hr />
+                                    </div>
                                 </div>
 
                                 <button type="button" className="text-gray-900 bg-gray-100 w-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center gap-2 items-center dark:focus:ring-gray-500 me-2 mb-2">
@@ -141,9 +138,9 @@ function registerModal({ isOpenModalRegister, closeModalRegister }) {
                                     Sign in with Google
                                 </button>
                                 <div className="text-sm font-medium text-[#3d3d3d]">
-                                    Not registered?{' '}
-                                    <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">
-                                        Create account
+                                    Already have an account? {' '}
+                                    <a onClick={openModalLogin} href="#" className="text-blue-700 hover:underline dark:text-blue-500">
+                                        Log in now
                                     </a>
                                 </div>
                             </form>

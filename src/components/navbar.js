@@ -215,6 +215,7 @@ export default function Navbar() {
                 openModalRegister={openModalRegister}
             />
             <ModalRegister
+                openModalLogin={openModalLogin}
                 isOpenModalRegister={isOpenModalRegister}
                 closeModalRegister={closeModalRegister}
             />

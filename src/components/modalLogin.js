@@ -105,7 +105,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister }) {
                                     type="submit"
                                     className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-sm text-sm px-5 py-2.5 text-center bg-gray-600"
                                 >
-                                    Login to your account
+                                    Login
                                 </button>
 
                                 <div className="flex justify-center gap-5 items-center">
