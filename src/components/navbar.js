@@ -59,7 +59,7 @@ export default function Navbar() {
         {
             'id': 4,
             'name': 'Competition',
-            'link': '/pricing'
+            'link': '/competition'
         },
         // {
         //     'id': 5,
