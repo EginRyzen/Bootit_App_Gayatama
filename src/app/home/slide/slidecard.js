@@ -6,7 +6,7 @@ function SlideCard({ settings, Slider }) {
             <div className="text-3xl mb-5 ml-2 font-semibold text-[#3a3f47]">Rekomendasi Kelas Online</div>
             <div className="slider-container">
                 <Slider {...settings}>
-                    <div className="px-2">
+                    <a href='' className="px-2">
                         <div className="group max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow">
                             <a href="#">
                                 <img className="rounded-t-lg" src="https://image.web.id/images/Belajar-Pemrograman-PHP8da6d6ee0391ee00.png" />
@@ -72,7 +72,7 @@ function SlideCard({ settings, Slider }) {
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div className="px-2">
                         <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow">
                             <a href="#">
