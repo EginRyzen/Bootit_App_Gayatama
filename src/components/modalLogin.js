@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister }) {
+function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, IsloggedIn }) {
     return (
         <>
             {/* Tetete */}
@@ -16,7 +16,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister }) {
                         }`}
                 >
                     {/* Modal content */}
-                    <div className="relative bg-white rounded-lg shadow">
+                    <div className="relative bg-white rounded-md shadow">
                         {/* Modal header */}
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
                             <h3 className="text-lg font-medium text-[#3d3d3d]">Sign in to our platform</h3>
@@ -103,6 +103,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister }) {
                                 </div>
                                 <button
                                     type="submit"
+                                    onClick={IsloggedIn}
                                     className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-sm text-sm px-5 py-2.5 text-center bg-gray-600"
                                 >
                                     Login
@@ -118,7 +119,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister }) {
                                 </div>
                                 </div>
 
-                                <button type="button" className="text-gray-900 bg-gray-100 w-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center gap-2 items-center dark:focus:ring-gray-500 me-2 mb-2">
+                                <button onClick={IsloggedIn} type="button" className="text-gray-900 bg-gray-100 w-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center gap-2 items-center dark:focus:ring-gray-500 me-2 mb-2">
                                     <div>
                                         <img src="https://d17ivq9b7rppb3.cloudfront.net/original/commons/sso-google-v3.svg" alt="Logo Google" />
                                     </div>

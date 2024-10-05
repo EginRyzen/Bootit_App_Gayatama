@@ -2,12 +2,45 @@
 import { useState, useEffect } from "react";
 import ModalLogin from "./modalLogin";
 import ModalRegister from "./registerModal";
+import { IoIosArrowUp } from "react-icons/io";
+import NavProfile from "./Mobile/NavProfile";
+import NavButtonProfile from "./Desktop/NavButtonProfile";
+import ButtonMobile from "./Mobile/ButtonMobile";
+import NavMenu from "./Desktop/NavMenu";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { GiMaterialsScience } from "react-icons/gi";
+import { LuBrainCircuit } from "react-icons/lu";
+import { FaMicrochip } from "react-icons/fa6";
+import { FaMobile } from "react-icons/fa6";
 
 export default function Navbar() {
     const [scrollDirection, setScrollDirection] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenModalLogin, setIsOpenModalLogin] = useState(false);
     const [isOpenModalRegister, setIsOpenModalRegister] = useState(false);
+    const [isLogin, setIsLogin] = useState(() => {
+        return sessionStorage.getItem('isLogin') === 'true';
+    });
+
+
+    const IsloggedIn = () => {
+        setIsLogin(true); 
+        sessionStorage.setItem('isLogin', 'true');
+        setIsOpenModalLogin(false);
+    };
+
+    const IsLoggedout = () => {
+        setIsLogin(false); 
+        sessionStorage.removeItem('isLogin');
+      };
+
+    //Mobile
+    const [isOpenMobile, setIsOpenMobile] = useState(null); // Menggunakan null sebagai state awal
+
+    const toggleSubMenu = (id) => {
+        setIsOpenMobile((prev) => (prev === id ? null : id)); // Toggle submenu berdasarkan id
+    };
+
 
     const openModalLogin = () => {
         setIsOpenModalLogin(true);
@@ -54,17 +87,32 @@ export default function Navbar() {
             'submenu': [
                 {
                     'id': 1,
-                    'name': 'Bootcamp',
+                    'icon' : <AiOutlineGlobal />,
+                    'name': 'Web Development',
                     'link': '/features'
                 },
                 {
                     'id': 2,
-                    'name': 'Bootcamp Bandugan',
+                    'icon' : <FaMobile />,
+                    'name': 'Mobile Development',
                     'link': '/features'
                 },
                 {
                     'id': 3,
-                    'name': 'Bootcamp Malang',
+                    'icon' : <GiMaterialsScience />,
+                    'name': 'Data Science',
+                    'link': '/features'
+                },
+                {
+                    'id': 4,
+                    'icon': <FaMicrochip />,
+                    'name': 'Ai Academy',
+                    'link': '/features'
+                },
+                {
+                    'id': 5,
+                    'icon' : <LuBrainCircuit />,
+                    'name': 'Machine Learning',
                     'link': '/features'
                 },
             ]
@@ -98,65 +146,20 @@ export default function Navbar() {
                             </div>
                         </div>
                         <div className="hidden lg:block">
-                            <div className="ml-10 flex items-baseline space-x-4">
-                                {navMenu.map((item) => {
-                                    return (
-                                        <div key={item.id} className="relative group">
-                                            {/* Link tanpa submenu */}
-                                            {!item.submenu ? (
-                                                <a
-                                                    href={item.link}
-                                                    className="block cursor-pointer hover:bg-[#e6e6e6] py-3 px-5 rounded-sm text-[#3a3f47] transition-all duration-300 ease-in-out text-base md:bg-transparent font-medium"
-                                                >
-                                                    {item.name}
-                                                </a>
+                            <div className="ml-10 flex items-baseline">
+                                <NavMenu navMenu={navMenu} />
 
-                                            ) : (
-                                                // Dropdown untuk item dengan submenu
-                                                <div className="dropdown flex text-[#3a3f47] hover:text-black cursor-pointer font-medium text-base tracking-wide hover:bg-[#e6e6e6] py-3 px-5 rounded-sm">
-                                                    <span>{item.name}</span>
-                                                    <div className="dropdown-menu absolute left-0 mt-5 pt-4 max-h-0 opacity-0 transform -translate-y-5 transition-all duration-500 ease-in-out overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0">
-                                                        <ul className="block w-[250px] bg-white border border-gray-200 rounded-lg shadow">
-                                                            {item.submenu.map((subItem) => (
-                                                                <li key={subItem.id} className="pl-3 pr-12 py-3 hover:bg-[#e6e6e6]">
-                                                                    <a
-                                                                        href={subItem.link}
-                                                                        className="block text-[#3a3f47] font-normal text-base hover:text-black cursor-pointer"
-                                                                    >
-                                                                        {subItem.name}
-                                                                        <p className="text-xs hover:text-none text-[#bbbbbb]">
-                                                                            Deskripsi Yang Akan Dimasukan
-                                                                        </p>
-                                                                    </a>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                                <button
-                                    onClick={openModalLogin}
-                                    type="button"
-                                    className="border focus:ring-4 focus:outline-none font-bold rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 border-[#3a3f47] text-[#3a3f47] hover:text-white hover:bg-gray-600 ring-gray-800 transition-all duration-500 ease-in-out"
-                                >
-                                    Login
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={openModalRegister}
-                                    className="border focus:ring-4 focus:outline-none font-bold rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 border-[#3a3f47] text-[#3a3f47] hover:text-white hover:bg-gray-600 ring-gray-800 transition-all duration-500 ease-in-out"
-                                >
-                                    Register
-                                </button>
+                                {/* Aktif Jika User Belum Login */}
+                                <NavButtonProfile openModalLogin={openModalLogin} openModalRegister={openModalRegister} isLogin={isLogin} IsLoggedout={IsLoggedout}/>
                             </div>
                         </div>
 
                         {/* Mobile Tampilan */}
 
-                        <div className="-mr-2 flex gap-2 lg:hidden">
+                        <div className="-mr-2 flex gap-2 py-2 lg:hidden">
+                            {/* Profile Menu Mobile */}
+                            <NavProfile />
+
                             <button
                                 type="button"
                                 onClick={() => setIsOpen(!isOpen)}
@@ -189,22 +192,56 @@ export default function Navbar() {
                     }`}
                     id="mobile-menu"
                 >
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 h-screen bg-white">
+                        <ButtonMobile openModalLogin={openModalLogin} openModalRegister={openModalRegister} />
                         {navMenu.map((item) => {
                             return (
-                                <a
-                                    key={item.name}
-                                    href={item.link}
-                                    className="block py-2 px-3 text-[#3a3f47] text-sm md:bg-transparent font-medium"
-                                >
-                                    {item.name}
-                                </a>
+                                <div key={item.id}>
+                                    {!item.submenu ? (
+                                        <a
+                                            href={item.link}
+                                            className="block py-2 px-3 text-[#3a3f47] text-sm md:bg-transparent font-medium"
+                                        >
+                                            {item.name}
+                                        </a>
+                                    ) : (
+                                        <div className="w-full">
+                                            <div
+                                                className="flex justify-between cursor-pointer py-2 px-3 text-[#3a3f47] text-sm md:bg-transparent font-medium"
+                                                onClick={() => toggleSubMenu(item.id)}
+                                            >
+                                                <span>{item.name}</span>
+                                                <IoIosArrowUp
+                                                    className={`transition-transform duration-300 ${isOpenMobile === item.id ? 'rotate-0' : 'rotate-180'
+                                                        }`}
+                                                />
+                                            </div>
+                                            <div
+                                                className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpenMobile === item.id ? 'max-h-96' : 'max-h-0'
+                                                    }`}
+                                                style={{ height: isOpenMobile === item.id ? 'auto' : '0px' }} // Optional: inline style to control height
+                                            >
+                                                {item.submenu.map((subItem) => (
+                                                    <div
+                                                        key={subItem.id}
+                                                        className="pl-3 pr-12 py-3 rounded-md hover:bg-[#e6e6e6]"
+                                                    >
+                                                        <a
+                                                            href={subItem.link}
+                                                            className="block text-[#3a3f47] font-normal text-xs hover:text-black cursor-pointer"
+                                                        >
+                                                            {subItem.name}
+                                                        </a>
+                                                    </div>
+                                                ))}
+                                            </div>
+
+                                        </div>
+                                    )}
+                                </div>
                             )
                         }
                         )}
-                        <div className="flex justify-center">
-                            <button type="button" className="text-[#3a3f47] hover:text-white hover:bg-gray-600 border bg-white border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-xs px-10 py-2 text-center cursor-pointer transition-all duration-500 ease-in-out">Sign in</button>
-                        </div>
                     </div>
                 </div>
             </nav>
@@ -213,6 +250,7 @@ export default function Navbar() {
                 isOpenModalLogin={isOpenModalLogin}
                 closeModalLogin={closeModalLogin}
                 openModalRegister={openModalRegister}
+                IsloggedIn={IsloggedIn}
             />
             <ModalRegister
                 openModalLogin={openModalLogin}

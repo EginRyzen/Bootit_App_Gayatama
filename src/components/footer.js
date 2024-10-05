@@ -6,7 +6,7 @@ function Footer() {
             <hr/>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 <div className="md:flex md:justify-between">
-                    <div className="mb-6 md:mb-0 w-2/5">
+                    <div className="mb-6 md:mb-0 w-full sm:w-2/5">
                         <a href="https://flowbite.com/" className="flex items-center">
                         <span className="text-[#508a8b] mb-0 sm:self-end text-2xl sm:text-3xl font-bold whitespace-nowrap">Boot.<span className="text-[#3a3f47]">IT</span></span>
                         </a>
