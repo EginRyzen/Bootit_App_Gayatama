@@ -2,45 +2,41 @@
 import { useState, useEffect } from "react";
 import ModalLogin from "./modalLogin";
 import ModalRegister from "./registerModal";
-import { IoIosArrowUp } from "react-icons/io";
 import NavProfile from "./Mobile/NavProfile";
 import NavButtonProfile from "./Desktop/NavButtonProfile";
 import ButtonMobile from "./Mobile/ButtonMobile";
 import NavMenu from "./Desktop/NavMenu";
+import NavMenuMobile from "./Mobile/NavMenu";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { GiMaterialsScience } from "react-icons/gi";
 import { LuBrainCircuit } from "react-icons/lu";
 import { FaMicrochip } from "react-icons/fa6";
-import { FaMobile } from "react-icons/fa6";
+import { IoLogoAndroid } from "react-icons/io";
 
 export default function Navbar() {
     const [scrollDirection, setScrollDirection] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenModalLogin, setIsOpenModalLogin] = useState(false);
     const [isOpenModalRegister, setIsOpenModalRegister] = useState(false);
-    const [isLogin, setIsLogin] = useState(() => {
-        return sessionStorage.getItem('isLogin') === 'true';
-    });
+    const [isLogin, setIsLogin] = useState(false);
+
+    useEffect(() => {
+        const loggedInStatus = sessionStorage.getItem('isLogin') === 'true';
+        setIsLogin(loggedInStatus); 
+    }, []); 
+
 
 
     const IsloggedIn = () => {
-        setIsLogin(true); 
+        setIsLogin(true);
         sessionStorage.setItem('isLogin', 'true');
         setIsOpenModalLogin(false);
     };
 
     const IsLoggedout = () => {
-        setIsLogin(false); 
+        setIsLogin(false);
         sessionStorage.removeItem('isLogin');
-      };
-
-    //Mobile
-    const [isOpenMobile, setIsOpenMobile] = useState(null); // Menggunakan null sebagai state awal
-
-    const toggleSubMenu = (id) => {
-        setIsOpenMobile((prev) => (prev === id ? null : id)); // Toggle submenu berdasarkan id
     };
-
 
     const openModalLogin = () => {
         setIsOpenModalLogin(true);
@@ -87,19 +83,19 @@ export default function Navbar() {
             'submenu': [
                 {
                     'id': 1,
-                    'icon' : <AiOutlineGlobal />,
+                    'icon': <AiOutlineGlobal />,
                     'name': 'Web Development',
                     'link': '/features'
                 },
                 {
                     'id': 2,
-                    'icon' : <FaMobile />,
+                    'icon': <IoLogoAndroid />,
                     'name': 'Mobile Development',
                     'link': '/features'
                 },
                 {
                     'id': 3,
-                    'icon' : <GiMaterialsScience />,
+                    'icon': <GiMaterialsScience />,
                     'name': 'Data Science',
                     'link': '/features'
                 },
@@ -111,7 +107,7 @@ export default function Navbar() {
                 },
                 {
                     'id': 5,
-                    'icon' : <LuBrainCircuit />,
+                    'icon': <LuBrainCircuit />,
                     'name': 'Machine Learning',
                     'link': '/features'
                 },
@@ -150,7 +146,7 @@ export default function Navbar() {
                                 <NavMenu navMenu={navMenu} />
 
                                 {/* Aktif Jika User Belum Login */}
-                                <NavButtonProfile openModalLogin={openModalLogin} openModalRegister={openModalRegister} isLogin={isLogin} IsLoggedout={IsLoggedout}/>
+                                <NavButtonProfile openModalLogin={openModalLogin} openModalRegister={openModalRegister} isLogin={isLogin} IsLoggedout={IsLoggedout} />
                             </div>
                         </div>
 
@@ -158,7 +154,7 @@ export default function Navbar() {
 
                         <div className="-mr-2 flex gap-2 py-2 lg:hidden">
                             {/* Profile Menu Mobile */}
-                            <NavProfile />
+                            <NavProfile isLogin={isLogin} IsLoggedout={IsLoggedout}/>
 
                             <button
                                 type="button"
@@ -193,55 +189,10 @@ export default function Navbar() {
                     id="mobile-menu"
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 h-screen bg-white">
-                        <ButtonMobile openModalLogin={openModalLogin} openModalRegister={openModalRegister} />
-                        {navMenu.map((item) => {
-                            return (
-                                <div key={item.id}>
-                                    {!item.submenu ? (
-                                        <a
-                                            href={item.link}
-                                            className="block py-2 px-3 text-[#3a3f47] text-sm md:bg-transparent font-medium"
-                                        >
-                                            {item.name}
-                                        </a>
-                                    ) : (
-                                        <div className="w-full">
-                                            <div
-                                                className="flex justify-between cursor-pointer py-2 px-3 text-[#3a3f47] text-sm md:bg-transparent font-medium"
-                                                onClick={() => toggleSubMenu(item.id)}
-                                            >
-                                                <span>{item.name}</span>
-                                                <IoIosArrowUp
-                                                    className={`transition-transform duration-300 ${isOpenMobile === item.id ? 'rotate-0' : 'rotate-180'
-                                                        }`}
-                                                />
-                                            </div>
-                                            <div
-                                                className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpenMobile === item.id ? 'max-h-96' : 'max-h-0'
-                                                    }`}
-                                                style={{ height: isOpenMobile === item.id ? 'auto' : '0px' }} // Optional: inline style to control height
-                                            >
-                                                {item.submenu.map((subItem) => (
-                                                    <div
-                                                        key={subItem.id}
-                                                        className="pl-3 pr-12 py-3 rounded-md hover:bg-[#e6e6e6]"
-                                                    >
-                                                        <a
-                                                            href={subItem.link}
-                                                            className="block text-[#3a3f47] font-normal text-xs hover:text-black cursor-pointer"
-                                                        >
-                                                            {subItem.name}
-                                                        </a>
-                                                    </div>
-                                                ))}
-                                            </div>
+                        <ButtonMobile openModalLogin={openModalLogin} openModalRegister={openModalRegister} isLogin={isLogin} />
 
-                                        </div>
-                                    )}
-                                </div>
-                            )
-                        }
-                        )}
+
+                        <NavMenuMobile navMenu={navMenu} />
                     </div>
                 </div>
             </nav>

@@ -4,7 +4,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
 
-function NavProfile() {
+function NavProfile( { isLogin, IsLoggedout } ) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -12,7 +12,8 @@ function NavProfile() {
     };
     return (
         <>
-            <div className="relative flex hover:cursor-pointer" onClick={toggleDropdown}>
+            {isLogin ? (
+                <div className="relative flex hover:cursor-pointer" onClick={toggleDropdown}>
                 <div className="flex text-sm bg-gray-800 my-auto rounded-full">
                     <img
                         className="w-8 h-8 rounded-full"
@@ -48,11 +49,10 @@ function NavProfile() {
                         </div>
                         <hr className="my-2" />
                         <div className="w-auto">
-                            <a href="http://localhost:3000/users">
+                            <a href="#" type='button' onClick={IsLoggedout}>
                                 <div className="pl-3 pr-12 py-2 hover:bg-[#e6e6e6] flex gap-3 items-center">
                                     <CiLogout className="rotate-180 text-red-500 font-medium" />
                                     <span
-                                        href="http://localhost:3000"
                                         className="block text-red-500 font-normal text-sm cursor-pointer"
                                     >
                                         Keluar
@@ -63,6 +63,9 @@ function NavProfile() {
                     </div>
                 </div>
             </div>
+            ):(
+                ""
+            )}
 
         </>
     )
