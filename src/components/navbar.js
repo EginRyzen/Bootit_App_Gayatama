@@ -85,25 +85,25 @@ export default function Navbar() {
                     'id': 1,
                     'icon': <AiOutlineGlobal />,
                     'name': 'Web Development',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 2,
                     'icon': <IoLogoAndroid />,
                     'name': 'Mobile Development',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 3,
                     'icon': <GiMaterialsScience />,
                     'name': 'Data Science',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 4,
                     'icon': <FaMicrochip />,
                     'name': 'Ai Academy',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 5,
