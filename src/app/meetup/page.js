@@ -4,14 +4,14 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 function Page() {
     return (
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex py-20 gap-10">
-            <div className='w-[30%]'>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row py-20 gap-10">
+            <div className='w-full md:w-[30%]'>
                 <div className='sticky top-28'>
                     <div className='text-xl font-medium text-[#3a3f47]'>Daftar Event</div>
                     <p className='text-sm font-light text-[#3a3f47] my-5'>Kembangkan jaringan dan belajar dari developer terbaik</p>
                 </div>
             </div>
-            <div className='w-[70%]'>
+            <div className='w-full md:w-[70%]'>
                 <form className="mx-auto w-full">
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -34,12 +34,14 @@ function Page() {
                 <div className='w-full flex justify-end items-center gap-5'>
                     <div className="block mb-2 text-md font-medium text-[#3a3f47]">Urut berdasarkan : </div>
                     <form className="max-w-sm flex items-center">
-                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-2 focus:ring-blue-300 focus:ring-offset-0 focus:border-blue-300 outline-noneblock w-full p-2 outline-none">
-                            <option selected>Choose a country</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="FR">France</option>
-                            <option value="DE">Germany</option>
+                        <select
+                            id="countries"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-2 focus:ring-blue-300 focus:ring-offset-0 focus:border-blue-300 outline-none block w-full p-2 capitalize"
+                            defaultValue="Choose a country" // Set the default selected value here
+                        >
+                            <option disabled value="Choose a country">latest events</option>
+                            <option value="US">latest updates</option>
+                            <option value="CA">ends soon</option>
                         </select>
                     </form>
                 </div>
