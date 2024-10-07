@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { meetupData } from "./../data"; // pastikan ini adalah import yang benar
 
 export function useCarousel() {
-    const images = ["bg1-carousel.jpg", "bg2-carousel.jpg", "bg3-carousel.jpg"];
+    const images = meetupData.map((item) => item.image); // Ambil URL gambar dari meetupData
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Logic to automatically change images every 3 seconds

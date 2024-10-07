@@ -1,26 +1,37 @@
 "use client";
 
 import React from "react";
+import { meetupData } from "./../data";
 
-const Carousel = ({ currentIndex, images }) => {
+const Carousel = ({ currentIndex }) => {
     return (
         <div id="controls-carousel" className="relative max-w-6xl mx-auto px-4 pt-5 pb-5 sm:px-6 lg:px-8" data-carousel="static">
-            <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-                {images.map((src, index) => (
+            <div className="relative h-96 overflow-hidden rounded-lg md:h-96"> {/* Ubah height agar lebih lebar */}
+                {meetupData.map((item, index) => (
                     <div
                         key={index}
                         className={`duration-700 ease-in-out transition-opacity ${index === currentIndex ? "opacity-100" : "opacity-0"
                             }`}
                         data-carousel-item
                     >
+                        {/* Gambar */}
                         <img
-                            src={src}
-                            className="absolute block w-full h-full object-cover"
+                            src={item.image}
+                            className="absolute block w-full h-full object-cover z-0"
                             alt={`Slide ${index + 1}`}
                         />
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100 z-10"></div>
+
+                        {/* Text Overlay */}
+                        <div className="absolute bottom-0 left-0 p-6 z-20 text-white">
+                            <a href={item.link} className="text-xl font-bold hover:underline">{item.title}</a> {/* Tambahkan hover:underline */}
+                            <p className="text-sm">{item.description}</p>
+                        </div>
                     </div>
                 ))}
             </div>
+
             <button
                 type="button"
                 className="absolute top-1/2 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none transform -translate-y-1/2 left-10"
@@ -62,7 +73,6 @@ const Carousel = ({ currentIndex, images }) => {
                     <span className="sr-only">Next</span>
                 </span>
             </button>
-
         </div>
     );
 };
