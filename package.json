@@ -19,10 +19,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@types/node": "22.7.4",
-=======
->>>>>>> 714258e05bfcbf17f11c0bb451236b7b3c9eaa4c
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8",

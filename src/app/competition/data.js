@@ -1,5 +1,6 @@
 export const competitionData = [
     {
+        id: 1,
         title: "DesignFusion: Innovate the Future of User Experience 1",
         field: "UI/UX Designer",
         dateStart: "01/12/2024",
@@ -8,9 +9,10 @@ export const competitionData = [
         place: "Online",
         description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:10:00",
-        image: "bg1-carousel.jpg"
+        image: "/bg1-carousel.jpg"
     },
     {
+        id: 2,
         title: "DesignFusion: Innovate the Future of User Experience 2",
         field: "UI/UX Designer",
         dateStart: "01/12/2024",
@@ -19,9 +21,10 @@ export const competitionData = [
         place: "Online",
         description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:14:00",
-        image: "bg2-carousel.jpg"
+        image: "/bg2-carousel.jpg"
     },
     {
+        id: 3,
         title: "DesignFusion: Innovate the Future of User Experience 3",
         field: "UI/UX Designer",
         dateStart: "01/12/2024",
@@ -30,6 +33,6 @@ export const competitionData = [
         place: "Online",
         description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:10:00",
-        image: "bg3-carousel.jpg"
+        image: "/bg3-carousel.jpg"
     },
 ];

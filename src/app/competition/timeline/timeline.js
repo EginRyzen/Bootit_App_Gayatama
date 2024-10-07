@@ -5,6 +5,7 @@ import { FaRegBuilding } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import { getSortedCompetitionData } from './sort'; // Impor fungsi dari sorted.js
+import { useRouter } from 'next/navigation'; // Pastikan menggunakan import yang benar
 
 export default function Timeline() {
     // Ambil data yang sudah diurutkan
@@ -36,6 +37,12 @@ export default function Timeline() {
 function TimelineItem({ item }) {
     // Panggil useCountdown di dalam komponen
     const timeLeft = useCountdown(item.endTime);
+    const router = useRouter();
+
+    const handleCardClick = (id) => {
+        // Navigasi ke halaman detail dengan id competition
+        router.push(`/competition/detail/${id}`);
+    };
 
     return (
         <div className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group my-4`}>
@@ -46,7 +53,7 @@ function TimelineItem({ item }) {
             </div>
 
             {/* Card */}
-            <a href={`/competition/detail?id=${item.id}`}
+            <button onClick={() => handleCardClick(item.id)}
                 className="w-[calc(100%-8rem)] md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100">
                 <div className="flex flex-col mb-1">
                     <div className="font-medium text-sm text-slate-950">{item.field}</div>
@@ -70,7 +77,7 @@ function TimelineItem({ item }) {
                 <div className="text-end mt-6 text-blue-500 cursor-pointer">
                     View More...
                 </div>
-            </a>
+            </button>
         </div>
     );
 }
