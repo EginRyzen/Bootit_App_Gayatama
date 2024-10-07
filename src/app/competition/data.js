@@ -1,4 +1,4 @@
-export const meetupData = [
+export const competitionData = [
     {
         title: "DesignFusion: Innovate the Future of User Experience 1",
         field: "UI/UX Designer",
@@ -8,7 +8,6 @@ export const meetupData = [
         place: "Online",
         description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:10:00",
-        link: "https://www.youtube.com/",
         image: "bg1-carousel.jpg"
     },
     {
@@ -20,7 +19,6 @@ export const meetupData = [
         place: "Online",
         description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:14:00",
-        link: "https://www.youtube.com/",
         image: "bg2-carousel.jpg"
     },
     {
@@ -32,7 +30,6 @@ export const meetupData = [
         place: "Online",
         description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:10:00",
-        link: "https://www.youtube.com/",
         image: "bg3-carousel.jpg"
     },
 ];

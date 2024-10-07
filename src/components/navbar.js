@@ -22,8 +22,8 @@ export default function Navbar() {
 
     useEffect(() => {
         const loggedInStatus = sessionStorage.getItem('isLogin') === 'true';
-        setIsLogin(loggedInStatus); 
-    }, []); 
+        setIsLogin(loggedInStatus);
+    }, []);
 
 
 
@@ -85,25 +85,25 @@ export default function Navbar() {
                     'id': 1,
                     'icon': <AiOutlineGlobal />,
                     'name': 'Web Development',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 2,
                     'icon': <IoLogoAndroid />,
                     'name': 'Mobile Development',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 3,
                     'icon': <GiMaterialsScience />,
                     'name': 'Data Science',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 4,
                     'icon': <FaMicrochip />,
                     'name': 'Ai Academy',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
                 {
                     'id': 5,
@@ -116,7 +116,7 @@ export default function Navbar() {
         {
             'id': 3,
             'name': 'Meet Up',
-            'link': '/pricing'
+            'link': 'http://localhost:3000/meetup'
         },
         {
             'id': 4,
@@ -154,7 +154,7 @@ export default function Navbar() {
 
                         <div className="-mr-2 flex gap-2 py-2 lg:hidden">
                             {/* Profile Menu Mobile */}
-                            <NavProfile isLogin={isLogin} IsLoggedout={IsLoggedout}/>
+                            <NavProfile isLogin={isLogin} IsLoggedout={IsLoggedout} />
 
                             <button
                                 type="button"

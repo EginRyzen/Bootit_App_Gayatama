@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bootit_app": "file:",
+    "caniuse-lite": "^1.0.30001667",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
@@ -19,7 +20,8 @@
   },
   "devDependencies": {
     "@types/node": "22.7.4",
-    "@types/react": "18.3.10",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "eslint-plugin-react-hooks": "^4.6.2",

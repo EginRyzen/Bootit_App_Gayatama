@@ -1,14 +1,14 @@
 import React from 'react';
-import { meetupData } from './../data';
+import { competitionData } from './../data';
 import { useCountdown } from './countdown'; // pastikan ini adalah import yang benar
 import { FaRegBuilding } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
-import { getSortedMeetupData } from './sort'; // Impor fungsi dari sorted.js
+import { getSortedCompetitionData } from './sort'; // Impor fungsi dari sorted.js
 
 export default function Timeline() {
     // Ambil data yang sudah diurutkan
-    const sortedMeetups = getSortedMeetupData(meetupData);
+    const sortedCompetition = getSortedCompetitionData(competitionData);
 
     return (
         <div>
@@ -19,7 +19,7 @@ export default function Timeline() {
                             <div className="font-bold text-2xl mb-8 mt-5 text-center">Latest Competition</div>
                             <div
                                 className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent before:z-0">
-                                {sortedMeetups.map((item, index) => {
+                                {sortedCompetition.map((item, index) => {
                                     return (
                                         <TimelineItem key={index} item={item} />
                                     );
@@ -46,7 +46,7 @@ function TimelineItem({ item }) {
             </div>
 
             {/* Card */}
-            <a href={item.link}
+            <a href={`/competition/detail?id=${item.id}`}
                 className="w-[calc(100%-8rem)] md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100">
                 <div className="flex flex-col mb-1">
                     <div className="font-medium text-sm text-slate-950">{item.field}</div>

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { competitionData } from '../data';
+import { competitionData } from '../../data';
 
 const CompetitionDetail = () => {
     const searchParams = useSearchParams();

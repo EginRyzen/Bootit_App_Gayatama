@@ -1,9 +1,9 @@
-export const getSortedMeetupData = (data) => {
+export const getSortedCompetitionData = (data) => {
     const now = new Date();
 
     // Filter data untuk hanya menyertakan item dengan endTime di masa depan
-    const futureMeetups = data.filter(item => new Date(item.endTime) > now);
+    const futureCompetition = data.filter(item => new Date(item.endTime) > now);
 
     // Urutkan data berdasarkan endTime
-    return futureMeetups.sort((a, b) => new Date(a.endTime) - new Date(b.endTime));
+    return futureCompetition.sort((a, b) => new Date(a.endTime) - new Date(b.endTime));
 }
