@@ -1,8 +1,23 @@
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> 714258e05bfcbf17f11c0bb451236b7b3c9eaa4c
 import React from 'react'
 import { Data } from './data.js'
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
+<<<<<<< HEAD
 function Page() {
+=======
+import { useRouter } from 'next/navigation';
+function Page() {
+    const router = useRouter();
+
+    const handleCardClick = (id) => {
+        // Navigasi ke halaman detail dengan id meetup
+        router.push(`meetup/detail/${id}`);
+    };
+>>>>>>> 714258e05bfcbf17f11c0bb451236b7b3c9eaa4c
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row py-20 gap-10">
             <div className='w-full md:w-[30%]'>
@@ -50,7 +65,11 @@ function Page() {
                 <div className="grid grid-cols-1 relative z-10 md:grid-cols-2 grid-rows-5 gap-5 mt-10">
                     {Data.map((item, index) => (
                         <div key={index} className="max-w-sm border bg-white rounded-lg shadow-2xl flex flex-col">
+<<<<<<< HEAD
                             <a href="#">
+=======
+                            <a href="#" onClick={() => handleCardClick(item.id)}>
+>>>>>>> 714258e05bfcbf17f11c0bb451236b7b3c9eaa4c
                                 <img className="rounded-t-lg" src={item.img} alt="" />
                             </a>
                             <div className="p-5 flex-grow">
