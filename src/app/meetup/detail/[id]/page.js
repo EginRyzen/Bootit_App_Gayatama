@@ -3,16 +3,15 @@ import React from 'react'
 import { FaClock } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { useParams } from 'next/navigation';
-import { Data } from '../../data'; // Import data meetup
+import { Data } from '../../data';
 import { useEffect, useState } from 'react';
 
 function Page() {
-    const params = useParams(); // useParams instead of useRouter
-    const { id } = params; // Extract the id directly from params
+    const params = useParams();
+    const { id } = params;
     const [meetup, setMeetup] = useState(null);
 
     useEffect(() => {
-        // Find the meetup based on the id when the component mounts
         const foundMeetup = Data.find(item => item.id === parseInt(id));
         if (foundMeetup) {
             setMeetup(foundMeetup);
@@ -20,7 +19,7 @@ function Page() {
     }, [id]);
 
     if (!meetup) {
-        return <p>Meetup not found</p>; // Handle invalid id
+        return <p>Meetup not found</p>;
     }
 
 
