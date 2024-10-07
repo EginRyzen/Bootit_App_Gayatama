@@ -1,13 +1,34 @@
+"use client";
 import React from 'react'
 import { FaClock } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { useParams } from 'next/navigation';
+import { Data } from '../../data'; // Import data meetup
+import { useEffect, useState } from 'react';
 
 function Page() {
+    const params = useParams(); // useParams instead of useRouter
+    const { id } = params; // Extract the id directly from params
+    const [meetup, setMeetup] = useState(null);
+
+    useEffect(() => {
+        // Find the meetup based on the id when the component mounts
+        const foundMeetup = Data.find(item => item.id === parseInt(id));
+        if (foundMeetup) {
+            setMeetup(foundMeetup);
+        }
+    }, [id]);
+
+    if (!meetup) {
+        return <p>Meetup not found</p>; // Handle invalid id
+    }
+
+
     return (
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row py-20 justify-between gap-10'>
-            <div className='w-[65%]'>
+            <div className='w-full md:w-[65%]'>
                 <div className='w-full mb-5 overflow-hidden'>
-                    <img src="/img/cardmeetup/1.png" className='h-96' />
+                    <img src="/img/cardmeetup/1.png" className='h-96 hidden md:block' />
                 </div>
                 <div className='text-2xl font-normal text-[#3a3f47] mb-8'>Acara ini sepenuhnya GRATIS dan akan diselenggarakan hari Minggu, 18 Agustus 2024 pukul 09.00 - 12.00 WIB Live di YouTube</div>
                 <div className='text-lg font-medium text-[#3a3f47] mb-2'>Details</div>
@@ -96,7 +117,7 @@ function Page() {
 
                 </div>
             </div>
-            <div className='w-[25%]'>
+            <div className='w-full md:w-[25%]'>
                 <div className='sticky top-28'>
                     <div className='text-2xl text-[#3a3f47] font-normal'>Keikutsertaan</div>
                     <p className='text-sm font-light text-[#3a3f47] my-5'>Silakan masuk dahulu ke Dicoding untuk dapat mendaftar ke event ini secara gratis.</p>
