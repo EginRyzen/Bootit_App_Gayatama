@@ -3,15 +3,15 @@ import React from 'react'
 function Footer() {
     return (
         <footer className="bg-white">
-            <hr/>
+            <hr />
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0 w-full sm:w-2/5">
                         <a href="https://flowbite.com/" className="flex items-center">
-                        <span className="text-[#508a8b] mb-0 sm:self-end text-2xl sm:text-3xl font-bold whitespace-nowrap">Boot.<span className="text-[#3a3f47]">IT</span></span>
+                            <span className="text-[#508a8b] mb-0 sm:self-end text-2xl sm:text-3xl font-bold whitespace-nowrap">Boot.<span className="text-[#3a3f47]">IT</span></span>
                         </a>
                         <p className="text-[#3a3f47] text-xs sm:text-sm mt-2">
-                        Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis atau presentasi visual seperti font, tipografi, dan tata letak.
+                            Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis atau presentasi visual seperti font, tipografi, dan tata letak.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -52,7 +52,7 @@ function Footer() {
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-[#3a3f47] sm:text-center">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+                    <span className="text-sm text-[#3a3f47] sm:text-center">© 2024 <a href="" className="hover:underline">Boot.IT™</a>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="#" className="text-gray-500 hover:text-gray-900">
