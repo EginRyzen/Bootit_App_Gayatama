@@ -30,7 +30,6 @@ export default function Timeline() {
         return <div className="text-center text-lg font-bold m-10">Loading Timeline...</div>;
     }
 
-
     return (
         <div>
             <section className="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
@@ -55,6 +54,7 @@ export default function Timeline() {
 }
 
 function TimelineItem({ item }) {
+    const router = useRouter();
     // Panggil useCountdown di dalam komponen
     const timeLeft = useCountdown(item.endTime);
 
@@ -73,7 +73,7 @@ function TimelineItem({ item }) {
 
             {/* Card */}
             <button onClick={() => handleCardClick(item.id)}
-                className="w-[calc(100%-8rem)] md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100">
+                className="w-[calc(100%-8rem)] md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100 text-left">
                 <div className="flex flex-col mb-1">
                     <div className="font-medium text-sm text-slate-950">{item.field}</div>
                     <div className="font-bold text-sm text-[#3a3f47]">{item.title}</div>
@@ -93,7 +93,8 @@ function TimelineItem({ item }) {
                     </div>
                 </div>
                 <div className="text-xs text-slate-500 mt-1">{item.description}</div>
-                <div className="text-end mt-6 text-blue-500 cursor-pointer">
+                {/* Align 'View More...' to the right */}
+                <div className="text-right mt-auto text-blue-500 cursor-pointer">
                     View More...
                 </div>
             </button>
