@@ -41,7 +41,7 @@ export default function MachineLearning() {
         <>
             <div className="grid pb-5">
                 <div className="flex gap-2.5 mb-4">
-                    <img src="https://course-recommender.app.dicoding.space/static/images/dibantu-logo.png" alt="Shanay image" className="w-10 h-11" />
+                    <img src="/shanaybot.png" alt="Shanay image" className="w-10 h-11" />
                     <div className="grid w-1/2">
                         <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
                         <div className="w-full grid mb-2">
