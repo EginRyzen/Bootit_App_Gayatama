@@ -12,7 +12,7 @@ function Page() {
     const [meetup, setMeetup] = useState(null);
 
     useEffect(() => {
-        const foundMeetup = Data.find(item => item.id === parseInt(id));
+        const foundMeetup = Data.dataMeetup.find(item => item.id === parseInt(id));
         if (foundMeetup) {
             setMeetup(foundMeetup);
         }
