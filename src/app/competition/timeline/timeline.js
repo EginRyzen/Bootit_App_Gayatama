@@ -82,7 +82,7 @@ function TimelineItem({ item }) {
             <button onClick={() => handleCardClick(item.id)}
                 className="w-[calc(100%-8rem)] md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100 text-left">
                 <div className="flex flex-col mb-1">
-                    <div className="font-medium text-sm text-slate-950">{item.field}</div>
+                    <span className="text-[#3a3f47] bg-transparent font-medium border-2 border-[#f2f2f2] rounded-md text-xs">{item.field}</span>
                     <div className="font-bold text-sm text-[#3a3f47]">{item.title}</div>
                 </div>
                 <div className="font-medium text-xs text-slate-700 mb-1 space-y-1">
