@@ -141,13 +141,15 @@ export default function Navbar() {
                                 </a>
                             </div>
                         </div>
-                        <div className="hidden lg:block">
+                        <div className="hidden lg:flex">
                             <div className="ml-10 flex items-baseline">
-                                <NavMenu navMenu={navMenu} />
+                                <>
+                                    <NavMenu navMenu={navMenu} />
+                                </>
 
                                 {/* Aktif Jika User Belum Login */}
-                                <NavButtonProfile openModalLogin={openModalLogin} openModalRegister={openModalRegister} isLogin={isLogin} IsLoggedout={IsLoggedout} />
                             </div>
+                            <NavButtonProfile openModalLogin={openModalLogin} openModalRegister={openModalRegister} isLogin={isLogin} IsLoggedout={IsLoggedout} />
                         </div>
 
                         {/* Mobile Tampilan */}

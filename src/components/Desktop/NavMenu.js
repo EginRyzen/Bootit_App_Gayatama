@@ -1,11 +1,11 @@
 import React from 'react'
 
-function NavMenu({ navMenu   }) {
+function NavMenu({ navMenu }) {
     return (
         <>
             {navMenu.map((item) => {
                 return (
-                    <div key={item.id} className="relative z-10">
+                    <div key={item.id} className="relative">
                         {/* Link tanpa submenu */}
                         {!item.submenu ? (
                             <a
