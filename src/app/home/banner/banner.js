@@ -6,17 +6,17 @@ function Banner() {
             <div className="flex space-x-reverse flex-col-reverse md:flex-row items-center py-12 justify-between">
                 <div className="flex flex-col w-full md:w-[50%] pt-5 md:pt-0 md:my-10">
                     <div className="text-xl sm:text-3xl font-normal text-[#3a3f47]">
-                        Bangun Karirmu Sebagai Developer Profesional
+                        Build Your Path to Success as a Reliable Developer
                     </div>
                     <p className="text-sm font-light text-[#3a3f47] my-4">
-                        Mulai belajar terarah dengan learning path
+                        The first step to directed learning is with a learning roadmap.
                     </p>
                     <div className="pt-5 md:mt-10">
                         <button
                             type="button"
                             className="text-white bg-[#3a3f47] hover:text-white border border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-[#3a3f47] dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 transition-all duration-500 ease-in-out"
                         >
-                            Belajar Sekarang
+                            Learn Now
                         </button>
                     </div>
                 </div>
