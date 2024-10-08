@@ -9,7 +9,8 @@ export const competitionData = [
         place: "Online",
         description: "Bergabunglah dalam Web Innovators Challenge 2024, kompetisi web development yang mengajak para developer dari berbagai tingkat keahlian untuk menunjukkan bakat dan kreativitas mereka! Tantang dirimu untuk menciptakan website inovatif yang tidak hanya menarik secara visual, tetapi juga fungsional dan ramah pengguna.",
         endTime: "2024-12-01T10:10:00",
-        image: "/bg6-carousel.jpg"
+        image: "/bg6-carousel.jpg",
+        link: "https://wa.me/+62"
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ export const competitionData = [
         place: "Online",
         description: "Bergabunglah dalam Cyber Shield Challenge 2024, ajang kompetisi cybersecurity yang menguji keterampilan dan kecerdasanmu dalam melindungi sistem dan data! Siapkan dirimu untuk menghadapi tantangan yang menuntut keahlian dalam hacking etis, analisis risiko, dan strategi pertahanan.",
         endTime: "2024-12-01T10:14:00",
-        image: "/bg4-carousel.jpg"
+        image: "/bg4-carousel.jpg",
+        link: "https://wa.me/+62"
     },
     {
         id: 3,
@@ -33,7 +35,8 @@ export const competitionData = [
         place: "Online",
         description: "Ikuti Game Development Contest 2024 dan tunjukkan bakatmu dalam menciptakan permainan yang menghibur dan inovatif! Kompetisi ini terbuka untuk semua developer, dari pemula hingga profesional, yang ingin mewujudkan ide-ide kreatif mereka dalam bentuk game.",
         endTime: "2024-12-01T10:10:00",
-        image: "/bg5-carousel.jpg"
+        image: "/bg5-carousel.jpg",
+        link: "https://wa.me/+62"
     },
     {
         id: 4,
@@ -45,7 +48,8 @@ export const competitionData = [
         place: "Online",
         description: "Bergabunglah dalam AI Innovation Challenge 2024, kompetisi yang mengajak para pengembang, peneliti, dan pelajar untuk mengeksplorasi potensi kecerdasan buatan! Tunjukkan kemampuanmu dalam menciptakan solusi AI yang inovatif dan berdampak bagi masyarakat.",
         endTime: "2024-12-01T10:14:00",
-        image: "/bg7-carousel.jpg"
+        image: "/bg7-carousel.jpg",
+        link: "https://wa.me/+62"
     },
     {
         id: 5,
@@ -57,7 +61,8 @@ export const competitionData = [
         place: "Online",
         description: " 🎉 Data Masters Challenge 2024 🎉Ungkap Wawasan dari Data! Bergabunglah dalam kompetisi analisis data dan machine learning yang menguji keterampilanmu dalam menggali informasi berharga dari data. Tunjukkan kemampuanmu dan bersaing dengan para ahli di bidang ini! Hadiah Menarik: Sertifikat,Uang Tunai,Kesempatan Kolaborasi dengan Perusahaan Teknologi Terkemuka.Daftar Sekarang dan Buktikan bahwa Kamu adalah Data Master!",
         endTime: "2024-12-01T10:14:00",
-        image: "/bg8-carousel.jpg"
+        image: "/bg8-carousel.jpg",
+        link: "https://wa.me/+62"
     },
     {
         id: 6,
@@ -69,6 +74,7 @@ export const competitionData = [
         place: "Online",
         description: "Ikuti Lomba Inovasi Perangkat IoT 2024, ajang yang mengajak para inovator dan pengembang untuk menciptakan solusi berbasis Internet of Things yang dapat meningkatkan kualitas hidup dan efisiensi berbagai sektor! Tunjukkan kreativitasmu dalam merancang perangkat IoT yang inovatif dan aplikatif.",
         endTime: "2024-12-01T10:14:00",
-        image: "/bg9-carousel.jpg"
+        image: "/bg9-carousel.jpg",
+        link: "https://wa.me/+62"
     },
 ];
