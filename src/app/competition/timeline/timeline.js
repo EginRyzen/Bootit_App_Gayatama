@@ -63,6 +63,13 @@ function TimelineItem({ item }) {
         router.push(`/competition/detail/${id}`);
     };
 
+    const truncateDescription = (description, maxWords) => {
+        const words = description.split(' ');
+        if (words.length <= maxWords) return description;
+        return words.slice(0, maxWords).join(' ') + '...'; // Tambahkan ellipsis
+    };
+
+
     return (
         <div className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group my-4`}>
             {/* Countdown Timer */}
@@ -92,7 +99,9 @@ function TimelineItem({ item }) {
                         <span>{item.dateStart} - {item.dateEnd}</span>
                     </div>
                 </div>
-                <div className="text-xs text-slate-500 mt-1">{item.description}</div>
+                <div className="text-xs text-slate-500 mt-1">
+                    {truncateDescription(item.description, 20)} {/* Ganti 20 dengan jumlah kata maksimal yang diinginkan */}
+                </div>
                 {/* Align 'View More...' to the right */}
                 <div className="text-right mt-auto text-blue-500 cursor-pointer">
                     View More...

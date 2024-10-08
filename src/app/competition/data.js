@@ -19,7 +19,7 @@ export const competitionData = [
         dateEnd: "30/12/2024",
         organizer: "Universitas Negeri Surabaya",
         place: "Online",
-        description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
+        description: "Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus. Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus. Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.",
         endTime: "2024-12-01T10:14:00",
         image: "/bg2-carousel.jpg"
     },
