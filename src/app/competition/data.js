@@ -61,14 +61,14 @@ export const competitionData = [
     },
     {
         id: 6,
-        title: "Artificial Intelegence Inovation Competition 2025 ",
-        field: "Artificial Intelegence",
+        title: "IoT Innovation Challenge 2024",
+        field: "Internet of Thinks",
         dateStart: "04/01/2025",
         dateEnd: "30/03/2025",
         organizer: "Universitas Negeri Surabaya",
         place: "Online",
-        description: "Bergabunglah dalam Cyber Shield Challenge 2024, ajang kompetisi cybersecurity yang menguji keterampilan dan kecerdasanmu dalam melindungi sistem dan data! Siapkan dirimu untuk menghadapi tantangan yang menuntut keahlian dalam hacking etis, analisis risiko, dan strategi pertahanan.",
+        description: "Ikuti Lomba Inovasi Perangkat IoT 2024, ajang yang mengajak para inovator dan pengembang untuk menciptakan solusi berbasis Internet of Things yang dapat meningkatkan kualitas hidup dan efisiensi berbagai sektor! Tunjukkan kreativitasmu dalam merancang perangkat IoT yang inovatif dan aplikatif.",
         endTime: "2024-12-01T10:14:00",
-        image: "/bg4-carousel.jpg"
+        image: "/bg9-carousel.jpg"
     },
 ];
