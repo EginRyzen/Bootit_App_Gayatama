@@ -7,16 +7,30 @@ import { competitionData } from '../../data';
 const CompetitionDetail = () => {
     const { id } = useParams();
     const [item, setItem] = useState(null);
+    const [loading, setLoading] = useState(true); // State untuk loading
 
     useEffect(() => {
-        const foundItem = competitionData.find(item => item.id === parseInt(id));
-        if (foundItem) {
-            setItem(foundItem);
-        }
+        const fetchData = async () => {
+            setLoading(true); // Mulai loading
+            // Simulasi delay untuk mengambil data, misalnya dari API atau sumber lain
+            await new Promise(resolve => setTimeout(resolve, 500)); // Simulasi 500ms
+
+            const foundItem = competitionData.find(item => item.id === parseInt(id));
+            if (foundItem) {
+                setItem(foundItem);
+            }
+            setLoading(false); // Selesai loading
+        };
+
+        fetchData();
     }, [id]);
 
+    if (loading) {
+        return <div className="text-center text-lg font-bold m-10">Loading Detail Competition...</div>;
+    }
+
     if (!item) {
-        return <div className="loading">Loading...</div>; // Mengindikasikan loading
+        return <div className="text-center text-lg font-bold m-10">Competition not found.</div>;
     }
 
     return (

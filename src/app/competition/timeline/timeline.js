@@ -11,6 +11,26 @@ export default function Timeline() {
     // Ambil data yang sudah diurutkan
     const sortedCompetition = getSortedCompetitionData(competitionData);
 
+    const [loading, setLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        // Simulasi pengambilan data
+        const fetchData = async () => {
+            setLoading(true);
+            // Panggil fungsi untuk mengambil data kompetisi
+            await getSortedCompetitionData();
+            setLoading(false);
+        };
+
+        fetchData();
+    }, []);
+
+    if (loading) {
+        // Jika masih loading, tampilkan indikator loading
+        return <div className="text-center text-lg font-bold m-10">Loading Timeline...</div>;
+    }
+
+
     return (
         <div>
             <section className="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
@@ -37,7 +57,6 @@ export default function Timeline() {
 function TimelineItem({ item }) {
     // Panggil useCountdown di dalam komponen
     const timeLeft = useCountdown(item.endTime);
-    const router = useRouter();
 
     const handleCardClick = (id) => {
         // Navigasi ke halaman detail dengan id competition
