@@ -36,7 +36,7 @@ function Page() {
     return (
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10'>
             <div className='w-full h-52 sm:h-80 md:h-[450px] rounded-xl relative z-10 overflow-hidden'>
-                <img src="./img/thumbnail.png" className='w-full h-[200px] sm:h-80 md:h-[500px] rounded-xl' />
+                <img src="./img/bootcamp.jpeg" className='w-full h-[200px] sm:h-80 md:h-[500px] rounded-xl' />
             </div>
             <div className='w-full mt-5 sm:mt-10'>
                 <h3 className='text-xl md:text-2xl font-medium text-[#3a3f47]'>Pilihan Program Bootcamp</h3>
