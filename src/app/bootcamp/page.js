@@ -39,8 +39,8 @@ function Page() {
                 <img src="./img/bootcamp.jpeg" className='w-full h-[200px] sm:h-80 md:h-[500px] rounded-xl' />
             </div>
             <div className='w-full mt-5 sm:mt-10'>
-                <h3 className='text-xl md:text-2xl font-medium text-[#3a3f47]'>Pilihan Program Bootcamp</h3>
-                <p className='text-xs md:text-sm font-light text-[#3a3f47]'>Pilih dan jadilah professional!</p>
+                <h3 className='text-xl md:text-2xl font-medium text-[#3a3f47]'>Bootcamp Program Options</h3>
+                <p className='text-xs md:text-sm font-light text-[#3a3f47]'>Choose and become a professional!</p>
             </div>
 
             <div className='flex md:flex-row flex-col py-10 md:py-20 justify-end md:justify-between'>
