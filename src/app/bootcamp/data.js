@@ -19,6 +19,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic HTML, CSS, and JavaScript",
         certification: "Web Development Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Hands-on projects",
             "Expert instructors",
@@ -51,7 +54,7 @@ export const bootcampData = [
     },
     {
         id: "2",
-        image: "home/Card/python.jpeg",
+        image: "/home/Card/python.jpeg",
         link: 'https://wa.me/+62',
         title: "Data Science Bootcamp: Analyze and Visualize Data",
         category: "Data Science",
@@ -69,6 +72,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic statistics and programming knowledge",
         certification: "Data Science Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Real-world case studies",
             "Portfolio building",
@@ -119,6 +125,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Familiarity with Python and statistics",
         certification: "Machine Learning Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Hands-on experience with ML algorithms",
             "Mentorship from industry professionals",
@@ -169,6 +178,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic programming knowledge",
         certification: "Mobile Development Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Create real-world applications",
             "Learn both iOS and Android development",
@@ -219,6 +231,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic TypeScript knowledge",
         certification: "Typescript Restful API Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Hands-on projects with TypeScript",
             "Access to community resources",

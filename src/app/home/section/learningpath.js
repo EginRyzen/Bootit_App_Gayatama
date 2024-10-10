@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function LearningPath() {
     return (
@@ -8,11 +8,11 @@ function LearningPath() {
                     Learning Path
                 </div>
                 <p className="text-center text-sm font-light text-[#3a3f47] my-4 w-3/4 md:w-1/2 mx-auto">
-                    Learning path akan membantu Anda dalam belajar di Academy dengan kurikulum yang dibangun bersama pelaku industri ternama.
+                    The learning path will guide you through studying at the Academy with a curriculum developed in collaboration with leading industry professionals.
                 </p>
             </div>
         </div>
-    )
+    );
 }
 
-export default LearningPath
+export default LearningPath;

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 function About() {
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-20">
             <div className="w-full flex flex-col mb-16 mb:mb-0 md:flex-row justify-between items-center gap-5">
                 <div className="w-full md:w-1/2">
-                    <div className="text-xl md:text-3xl font-normal text-[#3a3f47]">Event Bootcamp</div>
+                    <div className="text-xl md:text-3xl font-normal text-[#3a3f47]">Bootcamp Events</div>
                     <p className="my-5 text-start font-sm text-[#3a3f47] text-sm md:text-lg">
-                    Event bootcamp merupakan kesempatan emas bagi individu yang ingin memasuki dunia teknologi dengan cepat dan efektif. Dengan kombinasi pembelajaran praktis, dukungan mentor, dan koneksi industri, bootcamp ini menjadi pilihan populer bagi banyak orang yang ingin mengembangkan karier di bidang IT.
+                        Bootcamp events are a golden opportunity for individuals looking to enter the tech world quickly and effectively. With a combination of practical learning, mentor support, and industry connections, these bootcamps are a popular choice for many people seeking to develop a career in IT.
                     </p>
                 </div>
                 <div className="w-full md:w-1/2">
@@ -23,17 +23,17 @@ function About() {
                     </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                    <div className="text-xl md:text-3xl text-end font-normal text-[#3a3f47]">Event Meet Up</div>
+                    <div className="text-xl md:text-3xl text-end font-normal text-[#3a3f47]">Meetup Events</div>
                     <p className="my-5 text-start font-sm text-[#3a3f47] text-sm md:text-lg">
-                    Event meetup adalah kesempatan berharga bagi individu yang ingin terlibat dalam komunitas teknologi, belajar dari pengalaman orang lain, dan membangun jaringan yang bermanfaat. Dengan lingkungan yang santai dan kolaboratif, meetup ini menjadi platform yang ideal untuk pertukaran ide dan pengetahuan di dunia teknologi.
+                        Meetups are a valuable opportunity for individuals who want to engage with the tech community, learn from others' experiences, and build beneficial networks. With a relaxed and collaborative environment, these meetups are an ideal platform for exchanging ideas and knowledge in the tech world.
                     </p>
                 </div>
             </div>
             <div className="w-full flex flex-col mb-16 mb:mb-0 md:flex-row justify-between items-center gap-5">
                 <div className="w-full md:w-1/2">
-                    <div className="text-xl md:text-3xl font-normal text-[#3a3f47]">Event Competition</div>
+                    <div className="text-xl md:text-3xl font-normal text-[#3a3f47]">Competition Events</div>
                     <p className="my-5 text-start font-sm text-[#3a3f47] text-sm md:text-lg">
-                    Event competition IT adalah platform yang ideal bagi individu untuk menunjukkan keterampilan mereka, berinovasi, dan belajar dalam suasana yang kompetitif. Dengan tantangan yang beragam dan kesempatan untuk mendapatkan pengakuan, kompetisi ini menjadi ajang yang menarik bagi para profesional dan penggemar teknologi.
+                        IT competition events are an ideal platform for individuals to showcase their skills, innovate, and learn in a competitive atmosphere. With a variety of challenges and opportunities for recognition, these competitions are exciting venues for professionals and tech enthusiasts.
                     </p>
                 </div>
                 <div className="w-full md:w-1/2">
@@ -43,7 +43,7 @@ function About() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default About
+export default About;
