@@ -1,10 +1,11 @@
 "use client";
-import React from 'react'
-import { Data } from './data.js'
+import React from 'react';
+import { Data } from './data.js';
 import { useRouter } from 'next/navigation';
 import Search from './components/serach.js';
 import InputSelect from './components/inputselect.js';
 import Pagination from './components/pagination.js';
+
 function Page() {
     const router = useRouter();
 
@@ -12,6 +13,7 @@ function Page() {
         // Navigasi ke halaman detail dengan id meetup
         router.push(`meetup/detail/${id}`);
     };
+
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row py-20 gap-10">
             <div className='w-full md:w-[30%]'>
@@ -24,16 +26,15 @@ function Page() {
                 <Search />
                 <hr className='my-4' />
                 <div className='w-full flex justify-end items-center gap-5'>
-                    <div className="block mb-2 text-md font-medium text-[#3a3f47]">Urut berdasarkan : </div>
+                    <div className="block mb-2 text-md font-medium text-[#3a3f47]">Urut berdasarkan: </div>
                     <InputSelect />
                 </div>
 
-
-                <div className="grid grid-cols-1 relative z-10 md:grid-cols-2 grid-rows-5 gap-5 mt-10">
+                <div className="grid grid-cols-1 relative z-10 md:grid-cols-2 gap-5 mt-10">
                     {Data.dataMeetup.map((item, index) => (
-                        <div key={index} className="max-w-sm border bg-white rounded-lg shadow-2xl flex flex-col">
+                        <div key={index} className="max-w-sm border bg-white rounded-lg shadow-2xl flex flex-col h-full">
                             <a href="#" onClick={() => handleCardClick(item.id)}>
-                                <img className="rounded-t-lg" src={item.img} alt="" />
+                                <img className="w-full h-48 object-cover rounded-t-lg" src={item.img} alt="" />
                             </a>
                             <div className="p-5 flex-grow">
                                 <div className='flex gap-2 flex-wrap'>
@@ -61,14 +62,12 @@ function Page() {
                             </div>
                         </div>
                     ))}
-
                 </div>
 
                 <Pagination />
-
             </div>
         </div>
-    )
+    );
 }
 
-export default Page
+export default Page;
