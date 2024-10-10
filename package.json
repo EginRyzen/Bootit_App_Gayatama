@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "bootit_app": "file:",
-    "date-fns": "^4.1.0",
     "caniuse-lite": "^1.0.30001667",
+    "date-fns": "^4.1.0",
     "next": "14.2.13",
     "react": "^18",
     "react-datepicker": "^7.4.0",
