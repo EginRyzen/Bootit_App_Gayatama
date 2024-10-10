@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation'; // Update import here
 
 function Page() {
     const router = useRouter(); // Initialize router
-    const [selectedCategory, setSelectedCategory] = useState("All"); // State for selected category
+    const [selectedCategory, setSelectedCategory] = useState(sessionStorage.getItem("category")); // State for selected category
 
     const handleCardClick = (id) => {
         // Navigate to the detail page with the bootcamp id
@@ -86,7 +86,7 @@ function Page() {
                             {filteredBootcamps.map((item) => (
                                 <a
                                     key={item.id} // Gunakan item.id sebagai key
-                                    href="#" 
+                                    href="#"
                                     onClick={() => handleCardClick(item.id)} // Kirimkan item.id saat mengklik
                                     className="relative mx-auto md:mx-auto group flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm"
                                 >

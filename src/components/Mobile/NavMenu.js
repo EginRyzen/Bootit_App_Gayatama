@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 import { IoIosArrowUp } from "react-icons/io";
 
 export default function NavMenu({ navMenu }) {
-        //Mobile
-        const [isOpenMobile, setIsOpenMobile] = useState(null); 
+    //Mobile
+    const [isOpenMobile, setIsOpenMobile] = useState(null);
 
-        const toggleSubMenu = (id) => {
-            setIsOpenMobile((prev) => (prev === id ? null : id));
-        };
+    const toggleSubMenu = (id) => {
+        setIsOpenMobile((prev) => (prev === id ? null : id));
+    };
     return (
         <>
             {navMenu.map((item) => {
@@ -40,6 +40,9 @@ export default function NavMenu({ navMenu }) {
                                 >
                                     {item.submenu.map((subItem) => (
                                         <div
+                                            onClick={() => {
+                                                sessionStorage.setItem('category', subItem.name);
+                                            }}
                                             key={subItem.id}
                                             className="pl-3 pr-12 py-3 rounded-md flex gap-1 items-center hover:bg-[#e6e6e6] ml-2"
                                         >

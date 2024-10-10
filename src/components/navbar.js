@@ -107,7 +107,7 @@ export default function Navbar() {
                 {
                     'id': 4,
                     'icon': <FaMicrochip />,
-                    'name': 'Ai Academy',
+                    'name': 'AI Academy',
                     'link': 'http://localhost:3000/bootcamp'
                 },
                 {
