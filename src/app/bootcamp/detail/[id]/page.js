@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import dynamic from 'next/dynamic';
 import { IoShareSocialSharp } from "react-icons/io5";
 import { FaSwatchbook, FaClock, FaQuestionCircle, FaMedal, FaRegPlayCircle } from "react-icons/fa";
 import { VscBook } from "react-icons/vsc";
@@ -15,6 +16,49 @@ export default function Page() {
     const [activeIndex, setActiveIndex] = useState(null);
     const contentRefs = useRef([React.createRef(), React.createRef(), React.createRef()]);
     const [heights, setHeights] = useState({});
+
+    const Slider = dynamic(() => import("react-slick"), { ssr: false });
+
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        nextArrow: <SampleNextArrow />,  // Menggunakan custom next arrow
+        prevArrow: <SamplePrevArrow />,   // Menggunakan custom prev arrow
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                    nextArrow: null,  // Menghilangkan tombol next
+                    prevArrow: null,  // Menghilangkan tombol prev
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    nextArrow: null,  // Menghilangkan tombol next
+                    prevArrow: null,  // Menghilangkan tombol prev
+                }
+            }
+        ]
+
+    };
 
     const handleToggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -208,11 +252,30 @@ export default function Page() {
             </div>
             
             <div className='pt-10 pb-20 bg-gray-100'>
-                <div className='max-w-6xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8'>
-                    <div className='text-lg md:text-xl font-semibold text-[#3a3f47] mb-5 ms-2'>Other Popular Classes</div>
-                    <SlideCard />
-                </div>
+             <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
             </div>
         </>
+    );
+}
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", background: "#adb3af", }}  // Ubah warna di sini
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", background: "#adb3af" }}  // Ubah warna di sini
+            onClick={onClick}
+        />
     );
 }
