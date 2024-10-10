@@ -25,8 +25,7 @@ export default function Page() {
             setLoading(true);
             try {
                 await new Promise((resolve) => setTimeout(resolve, 500));
-                // Sesuaikan perbandingan id untuk mencocokkan string
-                const foundItem = bootcampData.find(item => item.id === id); // id tanpa parseInt
+                const foundItem = bootcampData.find(item => item.id === id);
                 if (foundItem) {
                     setItem(foundItem);
                 } else {
@@ -54,13 +53,12 @@ export default function Page() {
 
     if (loading) {
         return (
-            <div className="text-center text-lg font-bold m-10">Loading Detail Bootcamp...</div>
+            <div className="text-center text-lg font-bold m-10">Loading Bootcamp Details...</div>
         );
     }
 
-    // Pastikan item tidak null sebelum mengakses propertinya
     if (!item) {
-        return <div className="text-center text-lg font-bold m-10">Bootcamp tidak ditemukan.</div>;
+        return <div className="text-center text-lg font-bold m-10">Bootcamp not found.</div>;
     }
 
     return (
@@ -83,18 +81,18 @@ export default function Page() {
                                 </svg>
                                 <p className="ms-2 text-xs font-bold text-gray-900">{item.rating}</p>
                                 <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full" />
-                                <div className="text-xs font-medium text-gray-900">{item.students} Siswa Terdaftar</div>
+                                <div className="text-xs font-medium text-gray-900">{item.students} Registered Students</div>
                             </div>
                             <a className="flex">
                                 <IoShareSocialSharp />
                                 <span className="text-xs font-medium text-[#3a3f47]">Share</span>
                             </a>
                         </div>
-                        <div className="text-lg md:text-xl font-semibold text-[#3a3f47]">Tentang Kelas Bootcamp</div>
+                        <div className="text-lg md:text-xl font-semibold text-[#3a3f47]">About the Bootcamp Class</div>
                         <p className="text-[#3a3f47] text-xs md:text-sm my-3">
-                            Dalam kelas online ini kamu akan belajar {item.title}. Materi belajar telah disusun sedemikian rupa agar kamu mudah dalam memahaminya.
+                            In this online class, you will learn {item.title}. The study materials are structured to help you understand them easily.
                         </p>
-                        <div className="text-lg md:text-xl mt-10 font-semibold text-[#3a3f47]">Daftar Materi</div>
+                        <div className="text-lg md:text-xl mt-10 font-semibold text-[#3a3f47]">Course Content</div>
 
                         <div id="accordion-flush">
                             {item.modul && item.modul.map((modul, index) => (
@@ -159,8 +157,18 @@ export default function Page() {
                             ))}
                         </div>
 
+                        <div className='text-lg md:text-xl mt-10 mb-5 font-semibold text-[#3a3f47]'>Presenter</div>
 
-
+                        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+                            <div className="flex flex-col items-center pb-10">
+                                <img className="w-32 h-32 mb-3 mt-5 rounded-full shadow-lg" src="/img/user.png" alt="profile" />
+                                <h5 className="mb-1 text-lg md:text-xl font-medium text-gray-900">{item.presenter}</h5>
+                                <span className="text-xs md:text-sm text-[#3a3f47]">{item.jobPresenter}</span>
+                                <div className="mt-4 px-5 md:mt-6">
+                                    <p className='text-[#3a3f47] text-center text-xs md:text-sm'>{item.descPresenter}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='w-full md:w-[30%]'>
                         <div className="bg-white border border-gray-200 rounded-lg shadow sticky top-10">
@@ -169,9 +177,9 @@ export default function Page() {
                             </div>
                             <div className="p-5">
                                 <a href="#">
-                                    <h5 className="mb-2 text-lg md:text-xl font-semibold text-[#3a3f47]">Beli lewat Roadmap</h5>
+                                    <h5 className="mb-2 text-lg md:text-xl font-semibold text-[#3a3f47]">Buy through Roadmap</h5>
                                 </a>
-                                <p className='text-[#3a3f47] font-normal text-xs md:text-sm'>Yang akan kamu dapatkan :</p>
+                                <p className='text-[#3a3f47] font-normal text-xs md:text-sm'>What you will get:</p>
                                 <ul className='my-5'>
                                     <li className='flex items-center mb-2'>
                                         <FaSwatchbook className="size-4 text-slate-500" />
@@ -183,17 +191,15 @@ export default function Page() {
                                     </li>
                                     <li className='flex items-center mb-2'>
                                         <FaQuestionCircle className="size-4 text-slate-500" />
-                                        <p className='text-xs font-semibold text-[#3a3f47] ms-2 capitalize'>QnA Discussion Forum
-                                        </p>
+                                        <p className='text-xs font-semibold text-[#3a3f47] ms-2 capitalize'>QnA Discussion Forum</p>
                                     </li>
                                     <li className='flex items-center mb-2'>
                                         <FaMedal className="size-4 text-slate-500" />
-                                        <p className='text-xs font-semibold text-[#3a3f47] ms-2 capitalize'>{item.certification}
-                                        </p>
+                                        <p className='text-xs font-semibold text-[#3a3f47] ms-2 capitalize'>{item.certification}</p>
                                     </li>
                                 </ul>
                                 <a href={item.link} className="inline-flex items-center justify-center w-full text-white hover:text-[#3a3f47] hover:bg-white border bg-gray-600 border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium px-3 py-2 text-xs md:text-sm text-center rounded-lg">
-                                    Bergabung Sekarang
+                                    Join Now
                                 </a>
                             </div>
                         </div>
@@ -203,7 +209,7 @@ export default function Page() {
             
             <div className='pt-10 pb-20 bg-gray-100'>
                 <div className='max-w-6xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8'>
-                    <div className='text-lg md:text-xl font-semibold text-[#3a3f47] mb-5 ms-2'>Kelas Populer Lainnya</div>
+                    <div className='text-lg md:text-xl font-semibold text-[#3a3f47] mb-5 ms-2'>Other Popular Classes</div>
                     <SlideCard />
                 </div>
             </div>
