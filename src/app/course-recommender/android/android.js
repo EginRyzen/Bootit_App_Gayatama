@@ -46,12 +46,12 @@ export default function MachineLearning() {
                         <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
                         <div className="w-full grid mb-2">
                             <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yanag sesaui dengan level anda</h5>
+                                <h5 className="text-white text-sm font-medium leading-snug">Hi! I`m Shaney Cruz, ready to guide you to the right class for you. Let`s choose your skill level so we can start learning together!</h5>
                             </div>
                         </div>
                         <div className="w-full grid">
                             <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Pilih Level yang anda inginkan</h5>
+                                <h5 className="text-white text-sm font-medium leading-snug">Choose the level that suits you</h5>
                             </div>
                         </div>
                     </div>
@@ -59,8 +59,8 @@ export default function MachineLearning() {
             </div>
 
             <div className="grid mb-2 justify-end">
-                <div className="px-3 py-2 bg-white rounded-xl min-w-96 mb-5 ring-1 ring-[#1f478b36]">
-                    <p className='text-md font-medium capitalize'>Pilih Level Yang sesaui dengan levelmu</p>
+                <div className="px-3 py-2 bg-white rounded-xl w-[250px] md:min-w-96 mb-5 ring-1 ring-[#1f478b36]">
+                    <p className='text-md font-medium capitalize'>Choose the level that suits your level</p>
                     <ul className="px-2 mt-2 space-y-1 list-none">
                         {dataButton.map((item) => (
                             <li key={item.id}>

@@ -34,12 +34,12 @@ function Page() {
                                 <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
                                 <div className="w-full grid mb-2">
                                     <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                        <h5 className="text-white text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yang tepat dan sesuai dengan minat belajarmu</h5>
+                                        <h5 className="text-white text-sm font-medium leading-snug">Hi! I`m Shanay Cruz, here to guide you towards a new skill. Choose the field you want to pursue: Android, Web, or Machine Learning. Let`s get started!</h5>
                                     </div>
                                 </div>
                                 <div className="w-full grid">
                                     <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                        <h5 className="text-white text-sm font-medium leading-snug">Untuk itu, topik apa sih yang paling ingin kamu kuasai?</h5>
+                                        <h5 className="text-white text-sm font-medium leading-snug">So, which topic are you most curious about? Choose from Android, Web, or Machine Learning, and start your learning journey now.</h5>
                                     </div>
                                 </div>
                             </div>
@@ -48,8 +48,8 @@ function Page() {
 
                     {/* Pilihan jawaban */}
                     <div className="grid mb-2 justify-end">
-                        <div className="px-3 py-2 bg-white rounded-xl min-w-96 mb-5 ring-1 ring-[#1f478b36]">
-                            <p className="text-md font-medium capitalize">Pilih 1 Minat Belajar</p>
+                        <div className="px-3 py-2 w-[250px] bg-white rounded-xl md:min-w-96 mb-5 ring-1 ring-[#1f478b36]">
+                            <p className="text-md font-medium capitalize">Select 1 Learning Interest</p>
                             <ul className="px-2 mt-2 space-y-1 list-none">
                                 <li>
                                     <div

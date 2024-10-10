@@ -50,12 +50,7 @@ export default function Pemula() {
                         <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
                         <div className="w-full grid mb-2">
                             <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yanag sesaui dengan level anda</h5>
-                            </div>
-                        </div>
-                        <div className="w-full grid">
-                            <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Pilih Level yang anda inginkan</h5>
+                                <h5 className="text-white text-sm font-medium leading-snug">Well, here I have prepared a selection of materials that are tailored to your learning needs and interests. Please choose the material that suits you best and let`s start this fun learning adventure!</h5>
                             </div>
                         </div>
                     </div>
@@ -63,8 +58,8 @@ export default function Pemula() {
             </div>
 
             <div className="grid mb-2 justify-end">
-                <div className="px-3 py-2 bg-white rounded-xl min-w-96 mb-5 ring-1 ring-[#1f478b36]">
-                    <p className='text-md font-medium capitalize'>Pilih yang belum pernah kamu pelajari</p>
+                <div className="px-3 py-2 bg-white rounded-xl w-[250px] md:min-w-96 mb-5 ring-1 ring-[#1f478b36]">
+                    <p className='text-md font-medium capitalize'>Choose something you have never learned</p>
                     <ul className="px-2 mt-2 space-y-1 list-none">
                         {dataButton.map((item) => (
                             <li key={item.id}>
@@ -99,31 +94,33 @@ export default function Pemula() {
                     </div>
                 )}
             </div>
-            {selectedField === "HTML dan CSS Dasar" && (
-                <>
-                    <div className="grid pb-5">
+            {dataButton.map((item) => (
+                selectedField === item.button && (
+                    <div key={item.button} className="grid pb-5">
                         <div className="flex gap-2.5 mb-4">
                             <img src="https://course-recommender.app.dicoding.space/static/images/dibantu-logo.png" alt="Shanay image" className="w-10 h-11" />
-                            <div className="grid w-1/2">
+                            <div className="grid w-full md:w-1/2">
                                 <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
                                 <div className="w-full grid mb-2">
-                                    <div className="px-3.5 py-2 bg-gray-100 rounded-xl gap-3">
-                                        <a href="#" className="relative group flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                                    <div className="px-3.5 py-2 w-full bg-gray-100 rounded-xl gap-3">
+                                        <a href="#" className="relative group flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-full overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                                             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                                <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="card-image" />
+                                                <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="card-image" className="w-full h-full object-cover" />
                                             </div>
                                             <div className="p-4">
-                                                <h6 className="mb-2 text-[#3a3f47] text-lg font-semibold group-hover:text-blue-500">
-                                                    HTML dan CSS Dasar
+                                                <h6 className="mb-2 text-[#3a3f47] text-sm md:text-lg font-semibold group-hover:text-blue-500">
+                                                    {item.name}
                                                 </h6>
-                                                <p className="text-slate-400 text-sm leading-normal font-light">
+                                                <p className="text-slate-400 text-sm leading-normal font-light hidden md:block">
                                                     The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                                                    and near to  where you can enjoy the main night life in
+                                                    and near to where you can enjoy the main night life in
                                                     Barcelona.
                                                 </p>
                                             </div>
                                         </a>
-                                        <h5 className="text-[#3a3f47] text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yanag sesaui dengan level anda</h5>
+                                        <h5 className="text-[#3a3f47] text-sm font-medium leading-snug">
+                                            Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yang sesuai dengan level anda
+                                        </h5>
 
                                         <button type="button"
                                             onClick={removeStorage}
@@ -131,90 +128,13 @@ export default function Pemula() {
                                             Reset
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                </>
-            )}
-
-            {selectedField === "JavaScript" && (
-                <>
-                    <div className="grid pb-5">
-                        <div className="flex gap-2.5 mb-4">
-                            <img src="https://course-recommender.app.dicoding.space/static/images/dibantu-logo.png" alt="Shanay image" className="w-10 h-11" />
-                            <div className="grid w-1/2">
-                                <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
-                                <div className="w-full grid mb-2">
-                                    <div className="px-3.5 py-2 bg-gray-100 rounded-xl gap-3">
-                                        <a href="#" className="relative group flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                                            <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                                <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="card-image" />
-                                            </div>
-                                            <div className="p-4">
-                                                <h6 className="mb-2 text-[#3a3f47] text-lg font-semibold group-hover:text-blue-500">
-                                                    JavaScript Fundamental
-                                                </h6>
-                                                <p className="text-slate-400 text-sm leading-normal font-light">
-                                                    The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                                                    and near to  where you can enjoy the main night life in
-                                                    Barcelona.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <h5 className="text-[#3a3f47] text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yanag sesaui dengan level anda</h5>
-
-                                        <button type="button"
-                                            onClick={removeStorage}
-                                            className="text-[#3a3f47] bg-[#ffffff] capitalize rounded-md border border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold text-xs px-4 py-1 text-center me-2 mb-2 mt-5 transition-all duration-500 ease-in-out">
-                                            Reset
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            )}
-
-            {selectedField === "PHP" && (
-                <>
-                    <div className="grid pb-5">
-                        <div className="flex gap-2.5 mb-4">
-                            <img src="https://course-recommender.app.dicoding.space/static/images/dibantu-logo.png" alt="Shanay image" className="w-10 h-11" />
-                            <div className="grid w-1/2">
-                                <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
-                                <div className="w-full grid mb-2">
-                                    <div className="px-3.5 py-2 bg-gray-100 rounded-xl gap-3">
-                                        <a href="#" className="relative group flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                                            <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                                <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="card-image" />
-                                            </div>
-                                            <div className="p-4">
-                                                <h6 className="mb-2 text-[#3a3f47] text-lg font-semibold group-hover:text-blue-500">
-                                                    PHP
-                                                </h6>
-                                                <p className="text-slate-400 text-sm leading-normal font-light">
-                                                    The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                                                    and near to  where you can enjoy the main night life in
-                                                    Barcelona.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <h5 className="text-[#3a3f47] text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yanag sesaui dengan level anda</h5>
-
-                                        <button type="button"
-                                            onClick={removeStorage}
-                                            className="text-[#3a3f47] bg-[#ffffff] capitalize rounded-md border border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold text-xs px-4 py-1 text-center me-2 mb-2 mt-5 transition-all duration-500 ease-in-out">
-                                            Reset
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            )}
+                )
+            ))}
         </>
     )
 }
