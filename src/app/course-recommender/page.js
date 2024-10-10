@@ -34,12 +34,12 @@ function Page() {
                                 <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
                                 <div className="w-full grid mb-2">
                                     <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                        <h5 className="text-white text-sm font-medium leading-snug">Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yang tepat dan sesuai dengan minat belajarmu</h5>
+                                        <h5 className="text-white text-sm font-medium leading-snug">Hi! I`m Shanay Cruz, here to guide you towards a new skill. Choose the field you want to pursue: Android, Web, or Machine Learning. Let`s get started!</h5>
                                     </div>
                                 </div>
                                 <div className="w-full grid">
                                     <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                        <h5 className="text-white text-sm font-medium leading-snug">Untuk itu, topik apa sih yang paling ingin kamu kuasai?</h5>
+                                        <h5 className="text-white text-sm font-medium leading-snug">So, which topic are you most curious about? Choose from Android, Web, or Machine Learning, and start your learning journey now.</h5>
                                     </div>
                                 </div>
                             </div>
@@ -48,13 +48,16 @@ function Page() {
 
                     {/* Pilihan jawaban */}
                     <div className="grid mb-2 justify-end">
-                        <div className="px-3 py-2 bg-white rounded-xl min-w-96 mb-5 ring-1 ring-[#1f478b36]">
-                            <p className="text-md font-medium capitalize">Pilih 1 Minat Belajar</p>
+                        <div className="px-3 py-2 w-[250px] bg-white rounded-xl md:min-w-96 mb-5 ring-1 ring-[#1f478b36]">
+                            <p className="text-md font-medium capitalize">Select 1 Learning Interest</p>
                             <ul className="px-2 mt-2 space-y-1 list-none">
                                 <li>
                                     <div
-                                        onClick={() => handleClick("Android")}
-                                        className="hover:bg-[#e8e8e876] text-sm hover:font-medium rounded-lg block w-full text-[#3a3f47] p-2 cursor-pointer"
+                                        onClick={() => selectedField ? null : handleClick("Android")}
+                                        className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
+                                            ? `${selectedField === "Android" ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                            : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
+                                            }`}
                                     >
                                         Android??
                                     </div>
@@ -62,8 +65,11 @@ function Page() {
                                 <hr />
                                 <li>
                                     <div
-                                        onClick={() => handleClick("Web")}
-                                        className="hover:bg-[#e8e8e876] text-sm hover:font-medium rounded-lg block w-full text-[#3a3f47] p-2 cursor-pointer"
+                                        onClick={() => selectedField ? null : handleClick("Web")}
+                                        className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
+                                            ? `${selectedField === "Web" ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                            : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
+                                            }`}
                                     >
                                         Web??
                                     </div>
@@ -71,13 +77,19 @@ function Page() {
                                 <hr />
                                 <li>
                                     <div
-                                        onClick={() => handleClick("Machine Learning")}
-                                        className="hover:bg-[#e8e8e876] text-sm hover:font-medium rounded-lg block w-full text-[#3a3f47] p-2 cursor-pointer"
+                                        onClick={() => selectedField ? null : handleClick("Machine Learning")}
+                                        className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
+                                            ? `${selectedField === "Machine Learning" ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                            : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
+                                            }`}
                                     >
                                         Machine Learning??
                                     </div>
                                 </li>
                             </ul>
+                            {selectedField && (
+                                <p className="text-xs text-green-500 mt-2">You Choose {sessionStorage.getItem("field")}</p>
+                            )}
                         </div>
                         {selectedField && (
                             <div className="flex gap-2.5 justify-end">
