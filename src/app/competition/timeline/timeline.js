@@ -32,7 +32,7 @@ export default function Timeline() {
 
     return (
         <div>
-            <section className="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+            <section className="relative min-h-screen flex flex-col justify-center backdrop-blur-sm bg-white/20 overflow-hidden">
                 <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
                     <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-10">
                         <div className="w-full max-w-4xl mx-auto">
@@ -80,7 +80,7 @@ function TimelineItem({ item }) {
 
             {/* Card */}
             <button onClick={() => handleCardClick(item.id)}
-                className="w-full md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100 text-left">
+                className="w-full md:w-[calc(40%-2rem)] p-4 rounded backdrop-blur-sm bg-white/20 border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100 text-left">
                 <div className="flex flex-col mb-1">
                     <span className="text-[#3a3f47] bg-transparent font-medium border-2 border-[#f2f2f2] rounded-md text-xs">{item.field}</span>
                     <div className="font-bold text-sm text-[#3a3f47]">{item.title}</div>
