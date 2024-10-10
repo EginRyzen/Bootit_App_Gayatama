@@ -65,7 +65,7 @@ export default function Account() {
                 <div className='mt-5 w-full md:w-3/4'>
                     <div className="mb-5">
                         <div className='mb-2'>
-                            <a href='#' className='inline-block py-2 px-4 border border-slate-300 rounded-md'>
+                            <a href='#' className='inline-block py-2 px-4 border border-slate-300 rounded-sm'>
                                 <svg width={48} height={16} viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M46.5048 9.7783L47.8364 10.6801C47.4042 11.3268 46.3705 12.4363 44.5834 12.4363C42.3641 12.4363 40.7114 10.692 40.7114 8.47306C40.7114 6.11182 42.3817 4.50992 44.3965 4.50992C46.423 4.50992 47.4159 6.14735 47.7371 7.03135L47.9124 7.4823L42.6912 9.67744C43.0884 10.4725 43.7075 10.8759 44.5834 10.8759C45.4595 10.8759 46.0668 10.4369 46.5048 9.7783ZM42.4109 8.34858L45.8975 6.87716C45.7047 6.38478 45.1325 6.03478 44.449 6.03478C43.579 6.03478 42.37 6.81792 42.4109 8.34858Z" fill="#FF302F" />
                                     <path d="M38.1943 0.469608H39.8762V12.0744H38.1943V0.469513V0.469608Z" fill="#20B15A" />
