@@ -22,9 +22,11 @@ function SlideCard({ settings, Slider, bootcampData }) {
                                                 <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
                                             </svg>
                                         </div>
-                                        
+
                                         <h5 className="mb-4 text-md font-semibold tracking-tight text-[#3a3f47] group-hover:text-blue-500">
-                                            {item.title}
+                                            {item.title.length > 30
+                                                ? item.title.slice(0, 30) + '...'
+                                                : item.title}
                                         </h5>
                                         <div className="flex flex-wrap">
                                             <div className="flex items-center gap-1 mb-2  text-[#717884] w-1/2">
