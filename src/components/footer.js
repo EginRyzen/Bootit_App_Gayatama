@@ -16,13 +16,13 @@ function Footer() {
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#3a3f47] uppercase">Resources</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-[#3a3f47] uppercase">Partners</h2>
                             <ul className="text-[#3a3f47] font-normal">
                                 <li className="mb-4">
-                                    <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
+                                    <a href="#" className="hover:underline">Google</a>
                                 </li>
                                 <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                                    <a href="#" className="hover:underline">DiCoding</a>
                                 </li>
                             </ul>
                         </div>

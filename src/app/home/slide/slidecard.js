@@ -11,7 +11,7 @@ function SlideCard({ settings, Slider, bootcampData }) {
                             <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
                                 <a href="#">
                                     <img className="rounded-t-lg w-full h-48 object-cover" src={item.image} />
-                                </a>
+                                </div>
                                 <div className="p-5 flex flex-col justify-between h-full">
                                     <div>
                                         <div className="flex items-center gap-1 mb-2">
