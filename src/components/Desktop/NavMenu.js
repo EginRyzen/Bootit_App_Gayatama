@@ -1,6 +1,9 @@
 import React from 'react'
 
 function NavMenu({ navMenu }) {
+    // const handleClick = (name) => {
+    //     sessionStorage.setItem("category", name);
+    // }
     return (
         <>
             {navMenu.map((item) => {
@@ -25,7 +28,12 @@ function NavMenu({ navMenu }) {
                                         <hr className="my-2" />
                                         <ul className="w-auto grid grid-cols-2 gap-1">
                                             {item.submenu.map((subItem) => (
-                                                <li key={subItem.id} className="pl-3 pr-12 py-3 flex gap-1 items-center rounded-md hover:bg-[#e6e6e6]">
+                                                <li
+                                                    onClick={() => {
+                                                        sessionStorage.setItem('category', subItem.name);
+                                                    }}
+
+                                                    key={subItem.id} className="pl-3 pr-12 py-3 flex gap-1 items-center rounded-md hover:bg-[#e6e6e6]">
                                                     {subItem.icon}
                                                     <a
                                                         href={subItem.link}
