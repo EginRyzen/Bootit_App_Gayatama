@@ -1,10 +1,47 @@
-import React from 'react'
-import { FaUserEdit } from "react-icons/fa";
-import { FaUserCog } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { MdEdit } from "react-icons/md";
+"use client"
+import React, { useState } from 'react'
+import { FaUserEdit, FaUser, FaUserCog } from "react-icons/fa";
+import Profile from './profile/profile';
+import PersonalData from './personaldata/personaldata';
+import Account from './account/account';
 
 export default function User() {
+    const [activeTab, setActiveTab] = useState("profile");
+
+    const renderContent = () => {
+        switch (activeTab) {
+            case "profile":
+                return <Profile />
+            case 'personalData':
+                return <PersonalData />;
+            case 'account':
+                return <Account />;
+            default:
+                return <Profile />;
+        }
+    }
+
+    const buttonSetelan = [
+        {
+            name: 'Profile',
+            icon: <FaUser className='size-4' />,
+            onClick: () => setActiveTab('profile'),
+            button: "profile"
+        },
+        {
+            name: 'Personal Data',
+            icon: <FaUserEdit className='size-5' />,
+            onClick: () => setActiveTab('personalData'),
+            button: "personalData"
+        },
+        {
+            name: 'Account',
+            icon: <FaUserCog className='size-5' />,
+            onClick: () => setActiveTab('account'),
+            button: "account"
+        }
+
+    ]
     return (
         <div className='w-full'>
             <div className='bg-[#121314]'>
@@ -49,60 +86,25 @@ export default function User() {
                 <div className='w-full flex flex-col md:flex-row py-10'>
                     <div className='w-full md:w-[25%]'>
                         <div className='text-[#3a3f47] text-lg sm:text-3xl font-medium'>
-                            Pengaturan
+                            Setelan
                         </div>
                         <ul className="max-w-md text-gray-500 list-none dark:text-gray-400 py-5">
-                            <li className='cursor-pointer border-l-2 border-[#3a3f47] tracking-wide hover:bg-[#e6e6e6] py-3 my-1 px-5 rounded-sm flex items-center gap-3'>
-                                <FaUser className='size-4' />
-                                <div className='text-[#3a3f47] font-medium text-sm'>Profile</div>
-                            </li>
-                            <li className='cursor-pointer tracking-wide hover:bg-[#e6e6e6] py-3 my-1 px-5 rounded-sm flex items-center gap-3'>
-                                <FaUserEdit className='size-5' />
-                                <div className='text-[#3a3f47] font-medium text-sm'>Data Pribadi</div>
-                            </li>
-                            <li className='cursor-pointer tracking-wide hover:bg-[#e6e6e6] py-3 px-5 my-1 rounded-sm flex items-center gap-3'>
-                                <FaUserCog className='size-5' />
-                                <div className='text-[#3a3f47] font-medium text-sm'>Akun</div>
-                            </li>
+                            {buttonSetelan.map((item, index) => (
+                                <li
+                                    key={index}
+                                    onClick={item.onClick}
+                                    // className='cursor-pointer border-l-2 border-[#3a3f47] tracking-wide hover:bg-[#e6e6e6] py-3 my-1 px-5 rounded-sm flex items-center gap-3'
+                                    className={`cursor-pointer tracking-wide py-3 my-1 px-5 rounded-sm flex items-center gap-3
+                                        ${activeTab === item.button ? 'border-l-2 border-[#3a3f47]' : 'border-none hover:bg-[#e6e6e6]'}`}
+                                >
+                                    {item.icon}
+                                    <div className='text-[#3a3f47] font-medium text-sm'>{item.name}</div>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className='w-full md:w-[75%]'>
-                        <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow w-full">
-                            <h5 className="mb-2 text-xl font-medium tracking-tight text-slate-500">Profile Pengguna</h5>
-                            <hr />
-                            <div className="flex items-center mt-5">
-                                <div className='w-28 relative z-10'>
-                                    <img src='./img/user.png' />
-                                    <a href="#" className='block'><MdEdit className='bg-[#121314] text-white rounded-full size-8 p-2 absolute bottom-1 right-0' /></a>
-                                </div>
-                                <div className='ml-5 w-[40%]'>
-                                    <p className='text-slate-500 text-xs'>Gambar Profile Anda sebaiknya memiliki rasio 1:1
-                                        dan berukuran tidak lebih dari 2MB.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className='mt-10'>
-                                <form>
-                                    <div className="mb-5">
-                                        <label htmlFor="name" className="block mb-2 text-md font-medium text-gray-900">Your Name <sup className='text-red-500'>*</sup></label>
-                                        <input type="name" id="name" className="bg-gray-50 border text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border-gray-400 placeholder-gray-400" placeholder="Your Name" defaultValue="Egin Sefiano Widodo" required />
-                                    </div>
-                                    <div className="mb-5">
-                                        <label htmlFor="username" className="block mb-2 text-md font-medium text-gray-900">Username <sup className='text-red-500'>*</sup></label>
-                                        <input type="username" id="username" className="bg-gray-50 border text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border-gray-400 placeholder-gray-400" placeholder="Username" defaultValue="Egin Ryzen" required />
-                                    </div>
-                                    <div className="mb-5">
-                                        <label htmlFor="email" className="block mb-2 text-md font-medium text-gray-900">Email</label>
-                                        <input type="email" id="email" className="bg-gray-50 border text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border-gray-400 placeholder-gray-400 " disabled placeholder="eginsefianowidodo@gmail.com" required />
-                                        <span className='text-xs text-slate-400'>
-                                            Anda dapat mengubah alamat email melalui menu 
-                                            <a href='#' className='text-blue-500'> Akun</a>
-                                            .
-                                        </span>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                        {renderContent()}
                     </div>
                 </div>
             </div>

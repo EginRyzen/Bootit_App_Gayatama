@@ -53,8 +53,11 @@ function Page() {
                             <ul className="px-2 mt-2 space-y-1 list-none">
                                 <li>
                                     <div
-                                        onClick={() => handleClick("Android")}
-                                        className="hover:bg-[#e8e8e876] text-sm hover:font-medium rounded-lg block w-full text-[#3a3f47] p-2 cursor-pointer"
+                                        onClick={() => selectedField ? null : handleClick("Android")}
+                                        className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
+                                            ? `${selectedField === "Android" ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                            : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
+                                            }`}
                                     >
                                         Android??
                                     </div>
@@ -62,8 +65,11 @@ function Page() {
                                 <hr />
                                 <li>
                                     <div
-                                        onClick={() => handleClick("Web")}
-                                        className="hover:bg-[#e8e8e876] text-sm hover:font-medium rounded-lg block w-full text-[#3a3f47] p-2 cursor-pointer"
+                                        onClick={() => selectedField ? null : handleClick("Web")}
+                                        className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
+                                            ? `${selectedField === "Web" ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                            : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
+                                            }`}
                                     >
                                         Web??
                                     </div>
@@ -71,13 +77,19 @@ function Page() {
                                 <hr />
                                 <li>
                                     <div
-                                        onClick={() => handleClick("Machine Learning")}
-                                        className="hover:bg-[#e8e8e876] text-sm hover:font-medium rounded-lg block w-full text-[#3a3f47] p-2 cursor-pointer"
+                                        onClick={() => selectedField ? null : handleClick("Machine Learning")}
+                                        className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
+                                            ? `${selectedField === "Machine Learning" ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                            : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
+                                            }`}
                                     >
                                         Machine Learning??
                                     </div>
                                 </li>
                             </ul>
+                            {selectedField && (
+                                <p className="text-xs text-green-500 mt-2">You Choose {sessionStorage.getItem("field")}</p>
+                            )}
                         </div>
                         {selectedField && (
                             <div className="flex gap-2.5 justify-end">
