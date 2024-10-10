@@ -10,7 +10,7 @@ import SlideCard from "./slide/slidecard";
 import Questions from "./section/questioons";
 import Join from "./banner/join";
 import Chatbot from "./components/chatbot";
-import { DataHome } from "./data.js";
+import { bootcampData } from "../bootcamp/data";
 
 function HomePage() {
     const Slider = dynamic(() => import("react-slick"), { ssr: false });
@@ -80,7 +80,7 @@ function HomePage() {
                 <About />
 
                 {/* Slide Card */}
-                <SlideCard settings={settings} Slider={Slider} DataHome={DataHome} />
+                <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
 
                 {/* Question */}
                 <Questions toggleAccordion={toggleAccordion} openIndex={openIndex} />

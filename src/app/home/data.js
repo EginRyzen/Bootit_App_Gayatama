@@ -2,9 +2,9 @@ export const DataHome = {
     CardKelas: [
         {
             id: 1,
-            img: "/img/card/1.png",
+            img: "/home/Card/html-css.jpeg",
             teacher: "Hafidz Fauzan",
-            title: "Learn Basic Web Development",
+            title: "Basic Web Development",
             level: "Beginer",
             time: "4 hours",
             member: 200,
@@ -16,9 +16,9 @@ export const DataHome = {
         },
         {
             id: 2,
-            img: "/img/card/2.png",
+            img: "/home/Card/js.jpeg",
             teacher: "Nina Ria",
-            title: "Mastering JavaScript Fundamentals",
+            title: "JavaScript Fundamentals",
             level: "Intermediate",
             time: "6 hours",
             member: 150,
@@ -30,7 +30,7 @@ export const DataHome = {
         },
         {
             id: 3,
-            img: "/img/card/3.png",
+            img: "/home/Card/react.jpeg",
             teacher: "Dina Sari",
             title: "Introduction to React",
             level: "Beginner",
@@ -44,7 +44,7 @@ export const DataHome = {
         },
         {
             id: 4,
-            img: "/img/card/4.png",
+            img: "/home/Card/css.jpeg",
             teacher: "Arief Budi",
             title: "Advanced CSS Techniques",
             level: "Advanced",
@@ -58,9 +58,9 @@ export const DataHome = {
         },
         {
             id: 5,
-            img: "/img/card/5.png",
+            img: "/Home/Card/node.jpeg",
             teacher: "Siti Maulida",
-            title: "Backend Development with Node.js",
+            title: "Backend with Node.js",
             level: "Intermediate",
             time: "7 hours",
             member: 220,
@@ -72,7 +72,7 @@ export const DataHome = {
         },
         {
             id: 6,
-            img: "/img/card/6.png",
+            img: "/Home/Card/rest api.jpeg",
             teacher: "Joko Santoso",
             title: "Building RESTful APIs",
             level: "Advanced",
@@ -86,7 +86,7 @@ export const DataHome = {
         },
         {
             id: 7,
-            img: "/img/card/7.png",
+            img: "/home/Card/python.jpeg",
             teacher: "Budi Setiawan",
             title: "Data Science with Python",
             level: "Beginner",
@@ -100,7 +100,7 @@ export const DataHome = {
         },
         {
             id: 8,
-            img: "/img/card/8.png",
+            img: "/Home/Card/figma.jpeg",
             teacher: "Indah Permatasari",
             title: "Web Design Principles",
             level: "Beginner",

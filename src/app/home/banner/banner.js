@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { images } from './data'; // Sesuaikan path jika perlu
 
 function Banner() {
     return (
@@ -22,12 +23,12 @@ function Banner() {
                 </div>
                 <div className="w-[100%] md:w-[50%]">
                     <div className="w-full px-5 md:px-0">
-                        <img src="homepage-hero.png" />
+                        <img src={images[0].image} alt="Banner" />
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Banner
+export default Banner;

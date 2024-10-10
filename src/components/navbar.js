@@ -69,6 +69,11 @@ export default function Navbar() {
         }
     }, [scrollDirection]);
 
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+        // Navigasi ke halaman bootcamp dengan kategori yang sesuai
+        window.location.href = `/bootcamp/${category.replace(" ", "-").toLowerCase()}`; // Ubah spasi menjadi dash dan kecilkan huruf untuk URL
+    };
 
     const navMenu = [
         {
@@ -109,7 +114,7 @@ export default function Navbar() {
                     'id': 5,
                     'icon': <LuBrainCircuit />,
                     'name': 'Machine Learning',
-                    'link': '/features'
+                    'link': 'http://localhost:3000/bootcamp'
                 },
             ]
         },
@@ -121,7 +126,7 @@ export default function Navbar() {
         {
             'id': 4,
             'name': 'Competition',
-            'link': '/pricing'
+            'link': '/competition'
         },
         // {
         //     'id': 5,
