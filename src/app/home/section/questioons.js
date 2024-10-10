@@ -22,7 +22,11 @@ function Questions() {
                 {[
                     { question: 'What services do you offer?', answer: 'We offer a variety of services including web development, mobile app development, and digital marketing.' },
                     { question: 'How do I create an account?', answer: 'To create an account, click on the "Sign Up" button on the top right of the homepage and fill in the required information.' },
+<<<<<<< HEAD
                     { question: 'Is there a free trial avabackdrop-blur-sm bg-white/30ilable?', answer: 'Yes, we offer a 14-day free trial for new users. You can sign up and start exploring our features without any cost.' },
+=======
+                    { question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for new users. You can sign up and start exploring our features without any cost.' },
+>>>>>>> 666a7f4 (initial commit)
                     { question: 'What payment methods do you accept?', answer: 'We accept a variety of payment methods including credit cards, debit cards, PayPal, and more.' },
                     { question: 'How do I cancel my subscription?', answer: 'To cancel your subscription, go to your account settings, click on "Subscription", and follow the cancellation instructions.' },
                     { question: 'How can I reset my password?', answer: 'If you’ve forgotten your password, click on "Forgot Password" at the login page and follow the instructions to reset it.' },
