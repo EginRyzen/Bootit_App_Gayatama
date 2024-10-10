@@ -1,17 +1,27 @@
 import React from 'react';
+import { useRouter } from 'next/navigation'; // Update import here
 
 function SlideCard({ settings, Slider, bootcampData }) {
+
+    const router = useRouter(); // Initialize router
+
+    const handleCardClick = (id) => {
+        // Navigate to the detail page with the bootcamp id
+        router.push(`bootcamp/detail/${id}`);
+    };
+
     return (
         <div className="max-w-6xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8 py-10">
             <div className="text-3xl mb-5 ml-2 font-semibold text-[#3a3f47]">Other Popular Class</div>
             <div className="slider-container">
                 <Slider {...settings}>
                     {bootcampData.map((item, index) => (
-                        <a href='#' key={index} className="px-2">
-                            <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[400px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
-                                <div>
+                        <div key={index}
+                            onClick={() => handleCardClick(item.id)} className="px-2">
+                            <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
+                                <a href="#">
                                     <img className="rounded-t-lg w-full h-48 object-cover" src={item.image} />
-                                </div>
+                                </a>
                                 <div className="p-5 flex flex-col justify-between h-full">
                                     <div>
                                         <div className="flex items-center gap-1 mb-2">
@@ -24,7 +34,9 @@ function SlideCard({ settings, Slider, bootcampData }) {
                                         </div>
 
                                         <h5 className="mb-4 text-md font-semibold tracking-tight text-[#3a3f47] group-hover:text-blue-500">
-                                            {item.title}
+                                            {item.title.length > 30
+                                                ? item.title.slice(0, 30) + '...'
+                                                : item.title}
                                         </h5>
                                         <div className="flex flex-wrap">
                                             <div className="flex items-center gap-1 mb-2  text-[#717884] w-1/2">
@@ -79,7 +91,7 @@ function SlideCard({ settings, Slider, bootcampData }) {
                                     </table>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     ))}
                 </Slider>
             </div>
