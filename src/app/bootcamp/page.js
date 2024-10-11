@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineGlobal } from "react-icons/ai";
 import { GiMaterialsScience } from "react-icons/gi";
 import { LuBrainCircuit } from "react-icons/lu";
@@ -11,7 +11,17 @@ import { useRouter } from 'next/navigation'; // Update import here
 
 function Page() {
     const router = useRouter(); // Initialize router
-    const [selectedCategory, setSelectedCategory] = useState(sessionStorage.getItem("category")); // State for selected category
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+    // useEffect to update the state once the component is mounted (client-side)
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const storedCategory = sessionStorage.getItem("category");
+            if (storedCategory) {
+                setSelectedCategory(storedCategory);
+            }
+        }
+    }, []);
 
     const handleCardClick = (id) => {
         // Navigate to the detail page with the bootcamp id
