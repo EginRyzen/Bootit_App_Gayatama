@@ -7,15 +7,9 @@ function SlideCard({ settings, Slider, bootcampData }) {
             <div className="slider-container">
                 <Slider {...settings}>
                     {bootcampData.map((item, index) => (
-<<<<<<< HEAD
                         <a href='#' key={index} className="px-2">
                             <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[400px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
                                 <div>
-=======
-                        <a href='' key={index} className="px-2">
-                            <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
-                                <a href="#">
->>>>>>> 0afa145 (initial commit)
                                     <img className="rounded-t-lg w-full h-48 object-cover" src={item.image} />
                                 </div>
                                 <div className="p-5 flex flex-col justify-between h-full">
@@ -28,7 +22,7 @@ function SlideCard({ settings, Slider, bootcampData }) {
                                                 <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
                                             </svg>
                                         </div>
-                                        
+
                                         <h5 className="mb-4 text-md font-semibold tracking-tight text-[#3a3f47] group-hover:text-blue-500">
                                             {item.title}
                                         </h5>
