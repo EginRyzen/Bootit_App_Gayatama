@@ -22,14 +22,14 @@ function Chatbot() {
             <div className={`bg-white shadow-lg rounded-lg p-4 w-52 sm:w-96 transition-all duration-1000 ease-in-out ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[120%]'
                 }`}>
                 <div className='mb-3 text-xs md:text-sm'>
-                    Hi, aku Dibantu siap menemukan kelas yang tepat untukmu.
+                    Hi, I'm Shanay, ready to help you find the right class for you. 
                     <a href='http://localhost:3000/course-recommender' className='text-xs md:text-sm underline text-blue-500 font-semibold inline-flex items-center'>
-                        Coba Sekarang <IoMdArrowRoundForward />
+                        Try Now <IoMdArrowRoundForward />
                     </a>
                 </div>
                 <div className='flex justify-end'>
                     <button onClick={handleHide} className="underline px-3 pb-3 font-semibold md:text-sm text-xs">
-                        Sembunyikan
+                        Hide
                     </button>
                 </div>
             </div>

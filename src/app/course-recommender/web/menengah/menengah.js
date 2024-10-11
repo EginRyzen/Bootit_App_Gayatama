@@ -117,7 +117,7 @@ export default function Menengah() {
                                             </div>
                                         </a>
                                         <h5 className="text-[#3a3f47] text-sm font-medium leading-snug">
-                                            Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yang sesuai dengan level anda
+                                            Hello! Shanay here. I will help you find a class that matches your level.
                                         </h5>
 
                                         <button type="button"
