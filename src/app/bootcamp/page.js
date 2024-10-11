@@ -84,9 +84,8 @@ function Page() {
                     <div className="inset-5 mx-auto md:max-w-screen-xl px-4 w-full">
                         <div className="grid w-full sm:grid-cols-2 xl:grid-cols-3 gap-6">
                             {filteredBootcamps.map((item) => (
-                                <a
+                                <div
                                     key={item.id} // Gunakan item.id sebagai key
-                                    href="#"
                                     onClick={() => handleCardClick(item.id)} // Kirimkan item.id saat mengklik
                                     className="relative mx-auto md:mx-auto group flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm"
                                 >
@@ -109,7 +108,7 @@ function Page() {
                                         </svg>
                                         <span className="text-sm text-gray-500 ml-1">{item.rating}</span>
                                     </div>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </div>
