@@ -23,7 +23,7 @@ function Chatbot() {
                 }`}>
                 <div className='mb-3 text-xs md:text-sm'>
                     Hi, I`m Shanay, ready to help you find the right class for you.
-                    <a href='http://localhost:3000/course-recommender' className='text-xs md:text-sm underline text-blue-500 font-semibold inline-flex items-center'>
+                    <a href='/course-recommender' className='text-xs md:text-sm underline text-blue-500 font-semibold inline-flex items-center'>
                         Try Now <IoMdArrowRoundForward />
                     </a>
                 </div>
@@ -33,7 +33,7 @@ function Chatbot() {
                     </button>
                 </div>
             </div>
-            <a href="http://localhost:3000/course-recommender" className="block my-auto max-w-full">
+            <a href="/course-recommender" className="block my-auto max-w-full">
                 <img id="dibantu-logo" src="/shanaybot.png" className="h-14 md:h-16" />
             </a>
         </div>
