@@ -71,7 +71,7 @@ export default function Intermediate() {
                                         : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
                                         }`}
                                 >
-                                    {item.name}??
+                                    {item.name}
                                 </div>
                                 <hr />
                             </li>
