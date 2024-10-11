@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Beginer from "./beginer/beginer";
 import Intermediate from "./intermediate/intermediate";
 import Profesional from "./professional/professional";
+
 export default function MachineLearning() {
     const [selectedField, setSelectedField] = useState("");
 
@@ -17,14 +18,14 @@ export default function MachineLearning() {
         sessionStorage.setItem("level", choice);
         setTimeout(() => {
             setSelectedField(choice);
-        }, 1500)
+        }, 1500);
     };
 
     const dataButton = [
         {
             id: 1,
-            name: "Beginer",
-            button: 'Beginer'
+            name: "Beginner",
+            button: 'Beginner'
         },
         {
             id: 2,
@@ -37,16 +38,17 @@ export default function MachineLearning() {
             button: 'Professional'
         }
     ];
+    
     return (
         <>
             <div className="grid pb-5">
                 <div className="flex gap-2.5 mb-4">
                     <img src="/shanaybot.png" alt="Shanay image" className="w-10 h-11" />
                     <div className="grid w-1/2">
-                        <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
+                        <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay Cruz</h5>
                         <div className="w-full grid mb-2">
                             <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Hi! I`m Shaney Cruz, ready to guide you to the right class for you. Let`s choose your skill level so we can start learning together!</h5>
+                                <h5 className="text-white text-sm font-medium leading-snug">Hi! I’m Shaney Cruz, ready to guide you to the right class for you. Let’s choose your skill level so we can start learning together!</h5>
                             </div>
                         </div>
                         <div className="w-full grid">
@@ -67,7 +69,7 @@ export default function MachineLearning() {
                                 <div
                                     onClick={() => selectedField ? null : handleClick(item.button)}
                                     className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
-                                        ? `${selectedField === (item.button) ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                        ? `${selectedField === (item.button) ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled style
                                         : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
                                         }`}
                                 >
@@ -96,10 +98,9 @@ export default function MachineLearning() {
                 )}
             </div>
 
-            {selectedField === "Beginer" && <Beginer />}
+            {selectedField === "Beginner" && <Beginer />}
             {selectedField === "Intermediate" && <Intermediate />}
             {selectedField === "Professional" && <Profesional />}
-
         </>
-    )
+    );
 }

@@ -40,18 +40,16 @@ export default function Intermediate() {
         }
     ];
 
-
-
     return (
         <>
             <div className="grid pb-5">
                 <div className="flex gap-2.5 mb-4">
                     <img src="/shanaybot.png" alt="Shanay image" className="w-10 h-11" />
                     <div className="grid w-1/2">
-                        <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
+                        <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay Cruz</h5>
                         <div className="w-full grid mb-2">
                             <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Well, here I have prepared a selection of materials that are tailored to your learning needs and interests. Please choose the material that suits you best and let`s start this fun learning adventure!</h5>
+                                <h5 className="text-white text-sm font-medium leading-snug">Well, here I have prepared a selection of materials that are tailored to your learning needs and interests. Please choose the material that suits you best and let’s start this fun learning adventure!</h5>
                             </div>
                         </div>
                     </div>
@@ -67,7 +65,7 @@ export default function Intermediate() {
                                 <div
                                     onClick={() => selectedField ? null : handleClick(item.button)}
                                     className={`text-sm rounded-lg block w-full text-[#3a3f47] p-2 ${selectedField
-                                        ? `${selectedField === (item.button) ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled stylebg
+                                        ? `${selectedField === (item.button) ? "bg-gray-200 cursor-not-allowed" : "cursor-not-allowed"}` // Selected or disabled style
                                         : "hover:bg-[#e8e8e876] hover:font-medium cursor-pointer"
                                         }`}
                                 >
@@ -101,7 +99,7 @@ export default function Intermediate() {
                         <div className="flex gap-2.5 mb-4">
                             <img src="/shanaybot.png" alt="Shanay image" className="w-10 h-11" />
                             <div className="grid w-full md:w-1/2">
-                                <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay cruz</h5>
+                                <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay Cruz</h5>
                                 <div className="w-full grid mb-2">
                                     <div className="px-3.5 py-2 w-full bg-gray-100 rounded-xl gap-3">
                                         <a href="#" className="relative group flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-full overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -113,14 +111,12 @@ export default function Intermediate() {
                                                     {item.name}
                                                 </h6>
                                                 <p className="text-slate-400 text-sm leading-normal font-light hidden md:block">
-                                                    The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                                                    and near to where you can enjoy the main night life in
-                                                    Barcelona.
+                                                    The place is close to Barceloneta Beach and the bus stop is just a 2-minute walk away and near to where you can enjoy the main nightlife in Barcelona.
                                                 </p>
                                             </div>
                                         </a>
                                         <h5 className="text-[#3a3f47] text-sm font-medium leading-snug">
-                                            Halo! Dibantu di sini. Aku akan membantumu menemukan kelas yang sesuai dengan level anda
+                                            Hello! Shanay here. I will help you find a class that matches your level.
                                         </h5>
 
                                         <button type="button"
@@ -136,7 +132,6 @@ export default function Intermediate() {
                     </div>
                 )
             ))}
-
         </>
     )
 }
