@@ -50,7 +50,7 @@ export default function Beginner() {
                         <h5 className="text-gray-900 text-sm font-semibold leading-snug pb-1">Shanay Cruz</h5>
                         <div className="w-full grid mb-2">
                             <div className="px-3.5 py-2 bg-indigo-600 rounded-xl justify-start items-center gap-3 inline-flex">
-                                <h5 className="text-white text-sm font-medium leading-snug">Well, here I have prepared a selection of materials that are tailored to your learning needs and interests. Please choose the material that suits you best and let's start this fun learning adventure!</h5>
+                                <h5 className="text-white text-sm font-medium leading-snug">Well, here I have prepared a selection of materials that are tailored to your learning needs and interests. Please choose the material that suits you best and let`s start this fun learning adventure!</h5>
                             </div>
                         </div>
                     </div>
