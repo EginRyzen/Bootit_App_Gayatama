@@ -1,14 +1,26 @@
 import React from 'react';
+import { useRouter } from 'next/navigation'; // Update import here
 
 function SlideCard({ settings, Slider, bootcampData }) {
+    const router = useRouter(); // Initialize router
+
+    const handleCardClick = (id) => {
+        // Navigate to the detail page with the bootcamp id
+        router.push(`/bootcamp/detail/${id}`);
+    };
+
     return (
         <div className="max-w-6xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8 py-10">
             <div className="text-3xl mb-5 ml-2 font-semibold text-[#3a3f47]">Other Popular Class</div>
             <div className="slider-container">
                 <Slider {...settings}>
-                    {bootcampData.map((item, index) => (
-                        <a href='' key={index} className="px-2">
-                            <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
+                    {bootcampData.map((item) => (
+                        <div key={item.id} className="px-2">
+                            <div
+                                onClick={() => handleCardClick(item.id)}
+                                className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between cursor-pointer"
+                            >
+                                <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
                                 <a href="#">
                                     <img className="rounded-t-lg w-full h-48 object-cover" src={item.image} />
                                 </a>
@@ -81,7 +93,8 @@ function SlideCard({ settings, Slider, bootcampData }) {
                                     </table>
                                 </div>
                             </div>
-                        </a>
+                            </div>
+                        </div>
                     ))}
                 </Slider>
             </div>
