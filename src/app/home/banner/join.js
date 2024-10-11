@@ -9,7 +9,7 @@ function Join() {
                     <p className="mb-10 text-sm md:text-base sm:text-sm text-white">Learn more focused by attending classes and meet ups</p>
                 </div>
                 <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-                    <a href="" type="button"
+                    <a href="/bootcamp" type="button"
                         className="text-[#3a3f47] bg-[#ffffff] hover:text-white capitalize rounded-lg border border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold text-md px-6 py-2.5 text-center me-2 mb-2 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 transition-all duration-500 ease-in-out">
                         Join now
                     </a>

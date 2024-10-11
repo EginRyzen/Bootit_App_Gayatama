@@ -3,7 +3,7 @@ import React from 'react';
 function SlideCard({ settings, Slider, bootcampData }) {
     return (
         <div className="max-w-6xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8 py-10">
-            <div className="text-3xl mb-5 ml-2 font-semibold text-[#3a3f47]">Other Popular Class</div>
+            <div className="text-3xl mb-5 ml-2 font-semibold text-[#3a3f47]">Various Popular Class</div>
             <div className="slider-container">
                 <Slider {...settings}>
                     {bootcampData.map((item, index) => (
