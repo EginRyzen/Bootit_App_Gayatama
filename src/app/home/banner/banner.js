@@ -13,12 +13,13 @@ function Banner() {
                         The first step to directed learning is with a learning roadmap.
                     </p>
                     <div className="pt-5 md:mt-10">
-                        <button
+                        <a
+                            href= '/bootcamp'
                             type="button"
                             className="text-white bg-[#3a3f47] hover:text-white border border-[#3a3f47] focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-[#3a3f47] dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 transition-all duration-500 ease-in-out"
                         >
                             Learn Now
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div className="w-[100%] md:w-[50%]">

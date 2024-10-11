@@ -97,7 +97,7 @@ function Page() {
                     </a>
                     <div className='my-8'>
                         <div className='p-4'>
-                            <img src='/img/cardmeetup/1.png' alt="Event Visual" />
+                            <img src={meetup.img} alt="Event Visual" />
                         </div>
                         <div className='text-md font-normal text-[#3a3f47]'>
                             {meetup.description3}
