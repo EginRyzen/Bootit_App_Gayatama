@@ -45,21 +45,10 @@ function Page() {
     };
 
     return (
-<<<<<<< HEAD
         <main>
             <div className="fixed flex top-0 -z-10 h-full w-full bg-white">
                 {/* Warna Ungu */}
                 <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
-=======
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10'>
-            <div className='w-full h-52 sm:h-80 md:h-[450px] rounded-xl relative z-10 overflow-hidden'>
-                <img src="./img/bootcamp.jpeg" className='w-full h-[200px] sm:h-80 md:h-[500px] rounded-xl' />
-            </div>
-            <div className='w-full mt-5 sm:mt-10'>
-                <h3 className='text-xl md:text-2xl font-medium text-[#3a3f47]'>Bootcamp Program Options</h3>
-                <p className='text-xs md:text-sm font-light text-[#3a3f47]'>Choose and become a professional!</p>
-            </div>
->>>>>>> 666a7f4 (initial commit)
 
                 {/* Warna Merah */}
                 <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] translate-x-[10%] translate-y-[50%] rounded-full bg-[rgba(244,109,109,0.5)] opacity-50 blur-[80px]"></div>
