@@ -19,7 +19,7 @@ function NavButtonProfile({ openModalRegister, openModalLogin, isLogin, IsLogged
                             <div className="dropdown-menu w-[150px] absolute left-0 mt-5 pt-4 max-h-0 opacity-0 transform -translate-y-5 transition-all duration-500 ease-in-out overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0">
                                 <div className="bg-white border border-gray-200 rounded-md shadow py-2">
                                     <div className="w-auto">
-                                        <a href="http://localhost:3000/users">
+                                        <a href="/users">
                                             <div className="pl-3 pr-12 py-2 hover:bg-[#e6e6e6] flex gap-3">
                                                 <FaUser />
                                                 <span
