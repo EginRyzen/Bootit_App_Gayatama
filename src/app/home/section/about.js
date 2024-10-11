@@ -25,7 +25,7 @@ function About() {
                 <div className="w-full md:w-1/2">
                     <div className="text-xl md:text-3xl text-end font-normal text-[#3a3f47]">Meetup Events</div>
                     <p className="my-5 text-start font-sm text-[#3a3f47] text-sm md:text-lg">
-                        Meetups are a valuable opportunity for individuals who want to engage with the tech community, learn from others' experiences, and build beneficial networks. With a relaxed and collaborative environment, these meetups are an ideal platform for exchanging ideas and knowledge in the tech world.
+                        Meetups are a valuable opportunity for individuals who want to engage with the tech community, learn from others experiences, and build beneficial networks. With a relaxed and collaborative environment, these meetups are an ideal platform for exchanging ideas and knowledge in the tech world.
                     </p>
                 </div>
             </div>
