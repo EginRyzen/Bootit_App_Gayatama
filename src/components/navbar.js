@@ -90,38 +90,38 @@ export default function Navbar() {
                     'id': 1,
                     'icon': <AiOutlineGlobal />,
                     'name': 'Web Development',
-                    'link': 'http://localhost:3000/bootcamp'
+                    'link': '/bootcamp'
                 },
                 {
                     'id': 2,
                     'icon': <IoLogoAndroid />,
                     'name': 'Mobile Development',
-                    'link': 'http://localhost:3000/bootcamp'
+                    'link': '/bootcamp'
                 },
                 {
                     'id': 3,
                     'icon': <GiMaterialsScience />,
                     'name': 'Data Science',
-                    'link': 'http://localhost:3000/bootcamp'
+                    'link': '/bootcamp'
                 },
                 {
                     'id': 4,
                     'icon': <FaMicrochip />,
                     'name': 'AI Academy',
-                    'link': 'http://localhost:3000/bootcamp'
+                    'link': '/bootcamp'
                 },
                 {
                     'id': 5,
                     'icon': <LuBrainCircuit />,
                     'name': 'Machine Learning',
-                    'link': 'http://localhost:3000/bootcamp'
+                    'link': '/bootcamp'
                 },
             ]
         },
         {
             'id': 3,
             'name': 'Meet Up',
-            'link': 'http://localhost:3000/meetup'
+            'link': '/meetup'
         },
         {
             'id': 4,
