@@ -16,7 +16,7 @@ function SlideCard({ settings, Slider, bootcampData }) {
             <div className="slider-container">
                 <Slider {...settings}>
                     {bootcampData.map((item, index) => (
-                        <div
+                        <div key={index}
                             onClick={() => handleCardClick(item.id)} className="px-2">
                             <div className="group bg-white border border-gray-200 rounded-lg shadow h-full w-full min-h-[350px] max-h-[500px] min-w-[250px] max-w-[300px] flex flex-col justify-between">
                                 <a href="#">
