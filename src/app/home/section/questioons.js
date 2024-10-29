@@ -18,11 +18,11 @@ function Questions() {
             <div className="text-3xl mb-5 ml-2 font-normal text-[#3a3f47] text-center capitalize">
                 Frequently Asked Questions
             </div>
-            <div className="flex flex-col bg-[#f8f9fa] rounded-lg">
+            <div className="flex flex-col backdrop-blur-sm bg-white/20 rounded-lg">
                 {[
                     { question: 'What services do you offer?', answer: 'We offer a variety of services including web development, mobile app development, and digital marketing.' },
                     { question: 'How do I create an account?', answer: 'To create an account, click on the "Sign Up" button on the top right of the homepage and fill in the required information.' },
-                    { question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for new users. You can sign up and start exploring our features without any cost.' },
+                    { question: 'Is there a free trial avabackdrop-blur-sm bg-white/30ilable?', answer: 'Yes, we offer a 14-day free trial for new users. You can sign up and start exploring our features without any cost.' },
                     { question: 'What payment methods do you accept?', answer: 'We accept a variety of payment methods including credit cards, debit cards, PayPal, and more.' },
                     { question: 'How do I cancel my subscription?', answer: 'To cancel your subscription, go to your account settings, click on "Subscription", and follow the cancellation instructions.' },
                     { question: 'How can I reset my password?', answer: 'If you’ve forgotten your password, click on "Forgot Password" at the login page and follow the instructions to reset it.' },

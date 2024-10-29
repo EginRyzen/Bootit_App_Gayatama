@@ -1,5 +1,5 @@
 export const images = [
     {
-        image: "/home/banner/home.jpeg"
+        image: "/home/banner/home.png"
     }
 ];

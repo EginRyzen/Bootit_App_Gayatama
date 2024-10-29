@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="bg-white">
+        <footer className="backdrop-blur-sm bg-white/20">
             <hr />
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 <div className="md:flex md:justify-between">
