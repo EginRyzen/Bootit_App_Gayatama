@@ -6,7 +6,6 @@ import Banner from "./banner/banner";
 import LearningPath from "./section/learningpath";
 import SlideLogo from "./slide/slidelogo";
 import About from "./section/about";
-import SlideCard from "./slide/slidecard";
 import NewSlideCard from "./slide/newslidecard";
 import Questions from "./section/questioons";
 import Join from "./banner/join";
@@ -91,7 +90,6 @@ function HomePage() {
                 <About />
 
                 {/* Slide Card */}
-                {/* <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} /> */}
                 <NewSlideCard bootcampData={bootcampData} />
 
                 {/* Question */}

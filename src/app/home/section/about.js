@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+import Image from 'next/image';
 import React from 'react';
 
 function About() {
@@ -12,14 +14,14 @@ function About() {
                 </div>
                 <div className="w-full md:w-1/2">
                     <div className="w-full">
-                        <img src="home/home-bootcamp.jpg" className="mx-auto h-96 rounded-md md:float-end" />
+                        <Image src="/home/home-bootcamp.jpg" className="m-auto rounded-md h-96 md:float-end" width={450} height={450} loading="lazy" />
                     </div>
                 </div>
             </div>
             <div className="w-full flex flex-col-reverse mb-16 mb:mb-0 md:flex-row justify-between items-center gap-5">
                 <div className="w-full md:w-1/2">
                     <div className="w-full">
-                        <img src="home/home-MeetUp.jpg" className="m-auto rounded-md h-96 md:float-start" />
+                        <Image src="/home/home-MeetUp.jpg" className="m-auto rounded-md h-96 md:float-start" width={450} height={450} loading="lazy" />
                     </div>
                 </div>
                 <div className="w-full md:w-1/2">
@@ -38,7 +40,7 @@ function About() {
                 </div>
                 <div className="w-full md:w-1/2">
                     <div className="w-full">
-                        <img src="home/home-competition.jpg" className="mx-auto rounded-md h-96 md:float-end" />
+                        <Image src="/home/home-competition.jpg" className="m-auto rounded-md h-96 md:float-end" width={450} height={450} loading="lazy" />
                     </div>
                 </div>
             </div>

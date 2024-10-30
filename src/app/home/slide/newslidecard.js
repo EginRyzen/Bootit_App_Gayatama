@@ -5,8 +5,16 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination, Navigation } from 'swiper/modules';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 function NewSlideCard({ bootcampData }) {
+
+    const router = useRouter();
+
+    const handleCardClick = (id) => {
+        router.push(`bootcamp/detail/${id}`);
+    };
+
     return (
         <div className="max-w-6xl mx-auto relative overflow-hidden px-4 sm:px-6 lg:px-8 py-10">
             <div className="text-3xl mb-5 ml-2 font-semibold text-[#3a3f47]">Other Popular Class</div>
@@ -61,11 +69,11 @@ function NewSlideCard({ bootcampData }) {
                 >
                     {bootcampData.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <div className="max-w-sm min-h-[500px] mx-auto backdrop-blur-sm bg-white/50 rounded-lg shadow flex flex-col justify-between">
-                                <a href="#">
+                            <div onClick={() => handleCardClick(item.id)} className="max-w-sm min-h-[500px] mx-auto backdrop-blur-sm bg-white/50 rounded-lg shadow flex flex-col justify-between cursor-pointer">
+                                <div>
                                     <Image width={450} height={450} className="rounded-t-lg w-full h-48 object-cover"
                                         src={item.image} loading='lazy' alt='img-card' />
-                                </a>
+                                </div>
                                 <div className="p-5 flex flex-col justify-between h-full">
                                     <div>
                                         <div className="flex items-center gap-1 mb-2">

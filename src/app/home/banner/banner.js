@@ -23,12 +23,21 @@ function Banner() {
                         </a>
                     </div>
                 </div>
-                <div className="w-[100%] md:w-[40%]">
-                    <div className="w-full px-5 md:px-0">
-                        <Image src={images[0].image} alt="Banner" loading='lazy' width={450} height={450} />
+                <div className="w-[100%] md:w-[40%] flex flex-col justify-center relative h-[500px]">
+                    <div className="w-full px-5 md:px-0 justify-center">
+                        <Image src="/home/banner/Component/1.png" id='banner-logo' className='absolute right-2 top-14' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/5.png" id='banner-logo' className='absolute right-24 top-1' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/4.png" id='banner-logo' className='absolute left-24 top-1' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/1.png" id='banner-logo' className='absolute right-2 top-14' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/7.png" id='banner-logo' className='absolute left-2 top-14' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/3.png" id='banner-logo' className='absolute left-2 bottom-24' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/6.png" id='banner-logo' className='absolute right-2 bottom-24' alt="Banner" loading='lazy' width={60} height={60} />
+                        <Image src="/home/banner/Component/2.png" id='banner-logo' className='absolute left-[45%] bottom-4' alt="Banner" loading='lazy' width={60} height={60} />
+                        <div className='banner flex justify-center'>
+                            <Image src={images[0].image} alt="Banner" loading='lazy' width={400} height={400} />
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
