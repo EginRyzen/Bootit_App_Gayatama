@@ -144,10 +144,11 @@ function NewSlideCard({ bootcampData }) {
                                 </div>
                             </div>
                         </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-        </div>
+                    ))
+                    }
+                </Swiper >
+            </div >
+        </div >
     );
 }
 
