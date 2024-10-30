@@ -13,17 +13,17 @@ function NavMenu({ navMenu }) {
                         {!item.submenu ? (
                             <a
                                 href={item.link}
-                                className="block cursor-pointer hover:bg-[#e6e6e6] py-3 px-5 rounded-sm text-[#3a3f47] transition-all duration-300 ease-in-out text-base md:bg-transparent font-medium"
+                                className="block cursor-pointer hover:bg-gray-100 py-3 px-5 rounded-sm text-[#3a3f47] transition-all duration-300 ease-in-out text-base md:bg-transparent font-medium"
                             >
                                 {item.name}
                             </a>
 
                         ) : (
                             // Dropdown untuk item dengan submenu
-                            <div className="group dropdown flex text-[#3a3f47] hover:text-black cursor-pointer font-medium text-base tracking-wide hover:bg-[#e6e6e6] py-3 px-5 rounded-sm">
+                            <div className="group dropdown flex text-[#3a3f47] hover:text-black cursor-pointer font-medium text-base tracking-wide hover:bg-gray-100 py-3 px-5 rounded-sm">
                                 <span>{item.name}</span>
                                 <div className="dropdown-menu w-[500px] absolute left-0 mt-5 pt-4 max-h-0 opacity-0 transform -translate-y-5 transition-all duration-500 ease-in-out overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0">
-                                    <div className="bg-white border border-gray-200 rounded-lg shadow  p-3">
+                                    <div className="backdrop-blur-sm bg-white/50 border border-gray-200 rounded-lg shadow  p-3">
                                         <span className="pl-3 text-medium">Program</span>
                                         <hr className="my-2" />
                                         <ul className="w-auto grid grid-cols-2 gap-1">
