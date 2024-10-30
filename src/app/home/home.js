@@ -92,7 +92,7 @@ function HomePage() {
 
                 {/* Slide Card */}
                 {/* <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} /> */}
-                <NewSlideCard />
+                <NewSlideCard bootcampData={bootcampData} />
 
                 {/* Question */}
                 <Questions toggleAccordion={toggleAccordion} openIndex={openIndex} />

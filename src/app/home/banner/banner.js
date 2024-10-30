@@ -25,7 +25,7 @@ function Banner() {
                 </div>
                 <div className="w-[100%] md:w-[40%]">
                     <div className="w-full px-5 md:px-0">
-                        <Image src={images[0].image} alt="Banner" width={450} height={450} />
+                        <Image src={images[0].image} alt="Banner" loading='lazy' width={450} height={450} />
                     </div>
                 </div>
 
