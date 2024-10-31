@@ -14,14 +14,14 @@ function About() {
                 </div>
                 <div className="w-full md:w-1/2">
                     <div className="w-full">
-                        <Image src="/home/home-bootcamp.jpg" className="m-auto rounded-md h-96 md:float-end" width={450} height={450} loading="lazy" />
+                        <Image src="/home/home-bootcamp.jpg" alt='img' className="m-auto rounded-md h-96 md:float-end" width={450} height={450} loading="lazy" />
                     </div>
                 </div>
             </div>
             <div className="w-full flex flex-col-reverse mb-16 mb:mb-0 md:flex-row justify-between items-center gap-5">
                 <div className="w-full md:w-1/2">
                     <div className="w-full">
-                        <Image src="/home/home-MeetUp.jpg" className="m-auto rounded-md h-96 md:float-start" width={450} height={450} loading="lazy" />
+                        <Image src="/home/home-MeetUp.jpg" alt='img' className="m-auto rounded-md h-96 md:float-start" width={450} height={450} loading="lazy" />
                     </div>
                 </div>
                 <div className="w-full md:w-1/2">
@@ -40,7 +40,7 @@ function About() {
                 </div>
                 <div className="w-full md:w-1/2">
                     <div className="w-full">
-                        <Image src="/home/home-competition.jpg" className="m-auto rounded-md h-96 md:float-end" width={450} height={450} loading="lazy" />
+                        <Image src="/home/home-competition.jpg" alt='img' className="m-auto rounded-md h-96 md:float-end" width={450} height={450} loading="lazy" />
                     </div>
                 </div>
             </div>

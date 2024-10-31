@@ -106,7 +106,17 @@ export default function Page() {
     }
 
     return (
-        <>
+        <main>
+            <div className="fixed flex top-0 -z-10 h-full w-full bg-white">
+                {/* Warna Ungu */}
+                <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
+
+                {/* Warna Merah */}
+                <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] translate-x-[10%] translate-y-[50%] rounded-full bg-[rgba(244,109,109,0.5)] opacity-50 blur-[80px]"></div>
+
+                {/* Warna Biru */}
+                <div className="absolute bottom-auto left-0 top-0 h-[500px] w-[500px] translate-x-[10%] translate-y-[20%] rounded-full bg-[rgba(95,164,242,0.5)] opacity-50 blur-[80px]"></div>
+            </div>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row flex-wrap md:justify-between py-10 gap-3 relative z-20">
                     <div className="w-full md:w-[60%]">
@@ -203,7 +213,7 @@ export default function Page() {
 
                         <div className='text-lg md:text-xl mt-10 mb-5 font-semibold text-[#3a3f47]'>Presenter</div>
 
-                        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+                        <div className="w-full max-w-sm backdrop-blur-sm bg-white/30 border border-gray-200 rounded-lg shadow">
                             <div className="flex flex-col items-center pb-10">
                                 <img className="w-32 h-32 mb-3 mt-5 rounded-full shadow-lg" src="/img/user.png" alt="profile" />
                                 <h5 className="mb-1 text-lg md:text-xl font-medium text-gray-900">{item.presenter}</h5>
@@ -215,7 +225,7 @@ export default function Page() {
                         </div>
                     </div>
                     <div className='w-full md:w-[30%]'>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow sticky top-10">
+                        <div className="backdrop-blur-sm bg-white/30 border border-gray-200 rounded-lg shadow sticky top-10">
                             <div className="hidden md:block">
                                 <img className="rounded-t-lg" src={item.image} alt={item.title} />
                             </div>
@@ -250,11 +260,11 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            
+
             <div className='pt-10 pb-20 bg-gray-100'>
-             <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
+                <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
             </div>
-        </>
+        </main>
     );
 }
 
