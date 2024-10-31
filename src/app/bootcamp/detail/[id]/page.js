@@ -260,15 +260,9 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
 
             <div className='pt-10 pb-20 backdrop-blur-sm bg-white/30'>
                 <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
-=======
-            
-            <div className='pt-10 pb-20 bg-gray-100'>
-             <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
->>>>>>> 666a7f4 (initial commit)
             </div>
         </main>
     );
