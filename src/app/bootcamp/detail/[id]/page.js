@@ -261,7 +261,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className='pt-10 pb-20 bg-gray-100'>
+            <div className='pt-10 pb-20 backdrop-blur-sm bg-white/30'>
                 <SlideCard settings={settings} Slider={Slider} bootcampData={bootcampData} />
             </div>
         </main>

@@ -17,7 +17,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, Islo
                         }`}
                 >
                     {/* Modal content */}
-                    <div className="relative backdrop-blur-sm bg-white/50 rounded-sm shadow">
+                    <div className="relative backdrop-blur-xl bg-white/50 rounded-sm shadow">
                         {/* Modal header */}
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
                             <h3 className="text-lg font-medium text-[#3d3d3d]">Sign in to our platform</h3>
