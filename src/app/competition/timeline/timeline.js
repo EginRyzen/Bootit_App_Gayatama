@@ -74,13 +74,13 @@ function TimelineItem({ item }) {
         <div className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group my-4`}>
             {/* Countdown Timer */}
             <div suppressHydrationWarning
-                className="relative z-10 flex items-center justify-center w-10 mx-20 h-10 rounded-lg text-red-650 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                className="hidden md:flex relative z-10 items-center justify-center w-10 mx-20 h-10 rounded-lg text-red-650 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                 {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
             </div>
 
             {/* Card */}
             <button onClick={() => handleCardClick(item.id)}
-                className="w-[calc(100%-8rem)] md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100 text-left">
+                className="w-full md:w-[calc(40%-2rem)] p-4 rounded bg-white border-solid border-2 border-[#9e9e9e] flex flex-col justify-between h-full transition hover:bg-gray-100 text-left">
                 <div className="flex flex-col mb-1">
                     <span className="text-[#3a3f47] bg-transparent font-medium border-2 border-[#f2f2f2] rounded-md text-xs">{item.field}</span>
                     <div className="font-bold text-sm text-[#3a3f47]">{item.title}</div>

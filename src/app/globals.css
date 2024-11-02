@@ -9,21 +9,28 @@
 }
 
 #dibantu-logo {
-  animation: pulse 1s infinite;
+  animation: pulse 1.5s ease-in-out infinite;
   cursor: pointer;
   border-radius: 50%;
-  --tw-shadow-color: #BFDBFE66;
+  --tw-shadow-color: #02429166;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
 @keyframes pulse {
   0% {
-      box-shadow: 0 0 0 0 rgba(191, 219, 254, 1);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(191, 219, 254, 0.8);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(191, 219, 254, 0.4);
   }
   70% {
-      box-shadow: 0 0 0 10px rgba(191, 219, 254, 0);
+    transform: scale(1);
+    box-shadow: 0 0 0 30px rgba(191, 219, 254, 0.2);
   }
   100% {
-      transform: scale(1);ox-shadow: 0 0 0 0 rgba(191, 219, 254, 0);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(191, 219, 254, 0);
   }
 }

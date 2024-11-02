@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineGlobal } from "react-icons/ai";
 import { GiMaterialsScience } from "react-icons/gi";
 import { LuBrainCircuit } from "react-icons/lu";
@@ -11,7 +11,17 @@ import { useRouter } from 'next/navigation'; // Update import here
 
 function Page() {
     const router = useRouter(); // Initialize router
-    const [selectedCategory, setSelectedCategory] = useState("All"); // State for selected category
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+    // useEffect to update the state once the component is mounted (client-side)
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const storedCategory = sessionStorage.getItem("category");
+            if (storedCategory) {
+                setSelectedCategory(storedCategory);
+            }
+        }
+    }, []);
 
     const handleCardClick = (id) => {
         // Navigate to the detail page with the bootcamp id
@@ -39,8 +49,8 @@ function Page() {
                 <img src="./img/bootcamp.jpeg" className='w-full h-[200px] sm:h-80 md:h-[500px] rounded-xl' />
             </div>
             <div className='w-full mt-5 sm:mt-10'>
-                <h3 className='text-xl md:text-2xl font-medium text-[#3a3f47]'>Pilihan Program Bootcamp</h3>
-                <p className='text-xs md:text-sm font-light text-[#3a3f47]'>Pilih dan jadilah professional!</p>
+                <h3 className='text-xl md:text-2xl font-medium text-[#3a3f47]'>Bootcamp Program Options</h3>
+                <p className='text-xs md:text-sm font-light text-[#3a3f47]'>Choose and become a professional!</p>
             </div>
 
             <div className='flex md:flex-row flex-col py-10 md:py-20 justify-end md:justify-between'>
@@ -84,17 +94,11 @@ function Page() {
                     <div className="inset-5 mx-auto md:max-w-screen-xl px-4 w-full">
                         <div className="grid w-full sm:grid-cols-2 xl:grid-cols-3 gap-6">
                             {filteredBootcamps.map((item) => (
-                                <a
+                                <div
                                     key={item.id} // Gunakan item.id sebagai key
-                                    href="#" 
                                     onClick={() => handleCardClick(item.id)} // Kirimkan item.id saat mengklik
                                     className="relative mx-auto md:mx-auto group flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm"
                                 >
-                                    <div className="hover:text-orange-600 absolute z-30 top-2 right-0 mt-2 mr-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                        </svg>
-                                    </div>
                                     <div className="h-auto overflow-hidden">
                                         <div className="relative h-40 w-full overflow-hidden">
                                             <img src={item.image} alt="" className="h-full w-full object-cover" />
@@ -114,7 +118,7 @@ function Page() {
                                         </svg>
                                         <span className="text-sm text-gray-500 ml-1">{item.rating}</span>
                                     </div>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </div>

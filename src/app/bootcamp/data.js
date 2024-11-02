@@ -19,6 +19,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic HTML, CSS, and JavaScript",
         certification: "Web Development Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Hands-on projects",
             "Expert instructors",
@@ -51,7 +54,7 @@ export const bootcampData = [
     },
     {
         id: "2",
-        image: "home/Card/python.jpeg",
+        image: "/home/Card/python.jpeg",
         link: 'https://wa.me/+62',
         title: "Data Science Bootcamp: Analyze and Visualize Data",
         category: "Data Science",
@@ -69,6 +72,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic statistics and programming knowledge",
         certification: "Data Science Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Real-world case studies",
             "Portfolio building",
@@ -119,6 +125,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Familiarity with Python and statistics",
         certification: "Machine Learning Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Hands-on experience with ML algorithms",
             "Mentorship from industry professionals",
@@ -169,6 +178,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic programming knowledge",
         certification: "Mobile Development Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Create real-world applications",
             "Learn both iOS and Android development",
@@ -219,6 +231,9 @@ export const bootcampData = [
         module: '10 module',
         prerequisites: "Basic TypeScript knowledge",
         certification: "Typescript Restful API Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nibh tellus. Duis quis leo a ante iaculis ultrices a non lacus. Nullam non nibh sit amet ligula pharetra semper. Ut aliquet vulputate velit in fringilla. Pellentesque non urna in lacus facilisis faucibus. Phasellus euismod tortor id nunc aliquet auctor.",
         benefits: [
             "Hands-on projects with TypeScript",
             "Access to community resources",
@@ -243,6 +258,272 @@ export const bootcampData = [
             {
                 "moduleTitle": "Module 3: Testing and Deploying APIs",
                 "moduleDescription": "Learn testing and deployment strategies for your APIs.",
+                "videos": 9,
+                "readings": 4,
+                "assignments": 1
+            },
+            
+        ]
+    },
+    {
+        id: "7",
+        image: "/home/Card/node.jpeg",
+        link: 'https://wa.me/+62',
+        title: "NodeJS Bootcamp: Build Scalable Applications",
+        category: "Web Development",
+        description: "Learn to build scalable server-side applications using Node.js.",
+        rating: 4.8,
+        teacher: "Rudi Setiawan",
+        level: "Intermediate",
+        time: "5 hours",
+        students: 50,
+        modul: 8,
+        countRating: 90,
+        buy: "175.000",
+        rent: "225.000",
+        duration: "8 weeks",
+        module: '8 modules',
+        prerequisites: "Basic JavaScript knowledge",
+        certification: "NodeJS Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Back-End Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada urna at arcu volutpat, eu facilisis massa dignissim.",
+        benefits: [
+            "Hands-on experience with Node.js",
+            "Access to community resources",
+            "Expert instructors",
+            "Job placement assistance"
+        ],
+        modul: [
+            {
+                "moduleTitle": "Module 1: Introduction to NodeJS",
+                "moduleDescription": "Get started with Node.js and its ecosystem.",
+                "videos": 10,
+                "readings": 5,
+                "assignments": 2
+            },
+            {
+                "moduleTitle": "Module 2: Building REST APIs",
+                "moduleDescription": "Learn to build RESTful APIs using Node.js.",
+                "videos": 11,
+                "readings": 6,
+                "assignments": 3
+            },
+            {
+                "moduleTitle": "Module 3: Database Integration",
+                "moduleDescription": "Integrate databases with Node.js applications.",
+                "videos": 9,
+                "readings": 4,
+                "assignments": 2
+            },
+        ]
+    },
+    {
+        id: "8",
+        image: "/home/Card/js.jpeg",
+        link: 'https://wa.me/+62',
+        title: "JavaScript Bootcamp: Master the Language",
+        category: "Web Development",
+        description: "Become proficient in JavaScript and its advanced features.",
+        rating: 4.9,
+        teacher: "Diana Kusuma",
+        level: "Beginner",
+        time: "6 hours",
+        students: 80,
+        modul: 10,
+        countRating: 150,
+        buy: "180.000",
+        rent: "230.000",
+        duration: "6 weeks",
+        module: '10 modules',
+        prerequisites: "None",
+        certification: "JavaScript Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Front-End Developer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel erat non felis dictum cursus.",
+        benefits: [
+            "Comprehensive understanding of JavaScript",
+            "Hands-on coding exercises",
+            "Access to coding resources",
+            "Job placement assistance"
+        ],
+        modul: [
+            {
+                "moduleTitle": "Module 1: JavaScript Basics",
+                "moduleDescription": "Learn the fundamentals of JavaScript.",
+                "videos": 12,
+                "readings": 7,
+                "assignments": 3
+            },
+            {
+                "moduleTitle": "Module 2: Advanced JavaScript",
+                "moduleDescription": "Explore advanced concepts like closures and asynchronous programming.",
+                "videos": 10,
+                "readings": 5,
+                "assignments": 2
+            },
+            {
+                "moduleTitle": "Module 3: JavaScript Frameworks",
+                "moduleDescription": "Get introduced to popular JavaScript frameworks.",
+                "videos": 8,
+                "readings": 4,
+                "assignments": 1
+            },
+        ]
+    },
+    {
+        id: "9",
+        image: "/home/Card/ai.jpg",
+        link: 'https://wa.me/+62',
+        title: "Advanced Machine Learning Bootcamp",
+        category: "Machine Learning",
+        description: "Dive deep into advanced machine learning techniques and algorithms.",
+        rating: 4.85,
+        teacher: "Budi Santoso",
+        level: "Advanced",
+        time: "8 hours",
+        students: 40,
+        modul: 12,
+        countRating: 80,
+        buy: "220.000",
+        rent: "270.000",
+        duration: "12 weeks",
+        module: '12 modules',
+        prerequisites: "Basic understanding of Machine Learning",
+        certification: "Advanced Machine Learning Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Machine Learning Engineer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat justo ac erat tristique, non hendrerit enim condimentum.",
+        benefits: [
+            "In-depth knowledge of ML algorithms",
+            "Real-world applications",
+            "Access to advanced tools and techniques",
+            "Networking opportunities"
+        ],
+        modul: [
+            {
+                "moduleTitle": "Module 1: Advanced Supervised Learning",
+                "moduleDescription": "Explore advanced supervised learning techniques.",
+                "videos": 11,
+                "readings": 8,
+                "assignments": 3
+            },
+            {
+                "moduleTitle": "Module 2: Deep Learning",
+                "moduleDescription": "Learn about neural networks and deep learning techniques.",
+                "videos": 10,
+                "readings": 7,
+                "assignments": 2
+            },
+            {
+                "moduleTitle": "Module 3: Model Optimization",
+                "moduleDescription": "Understand techniques for optimizing machine learning models.",
+                "videos": 9,
+                "readings": 6,
+                "assignments": 1
+            },
+        ]
+    },
+    {
+        id: "10",
+        image: "/home/Card/ai.jpg",
+        link: 'https://wa.me/+62',
+        title: "AI Bootcamp: Build Intelligent Applications",
+        category: "AI Academy",
+        description: "Learn the principles of artificial intelligence and how to create intelligent applications.",
+        rating: 4.9,
+        teacher: "Ari Widodo",
+        level: "Intermediate",
+        time: "7 hours",
+        students: 65,
+        modul: 10,
+        countRating: 110,
+        buy: "200.000",
+        rent: "250.000",
+        duration: "10 weeks",
+        module: '10 modules',
+        prerequisites: "Basic programming knowledge",
+        certification: "AI Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "AI Developer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis elit id nisi bibendum, eu dignissim nulla aliquam.",
+        benefits: [
+            "Hands-on AI projects",
+            "Expert guidance",
+            "Access to the latest AI tools",
+            "Job placement assistance"
+        ],
+        modul: [
+            {
+                "moduleTitle": "Module 1: Introduction to AI",
+                "moduleDescription": "Learn the foundations of artificial intelligence.",
+                "videos": 10,
+                "readings": 5,
+                "assignments": 2
+            },
+            {
+                "moduleTitle": "Module 2: Machine Learning Basics",
+                "moduleDescription": "Understand the basics of machine learning in AI.",
+                "videos": 12,
+                "readings": 7,
+                "assignments": 3
+            },
+            {
+                "moduleTitle": "Module 3: AI Applications",
+                "moduleDescription": "Explore various applications of AI in the industry.",
+                "videos": 9,
+                "readings": 6,
+                "assignments": 1
+            },
+        ]
+    },
+    {
+        id: "11",
+        image: "/home/Card/css.jpeg",
+        link: 'https://wa.me/+62',
+        title: "CSS Basic Bootcamp: Styling for Beginners",
+        category: "Web Development",
+        description: "Learn the basics of CSS to style your web applications.",
+        rating: 4.7,
+        teacher: "Lina Mariani",
+        level: "Beginner",
+        time: "4 hours",
+        students: 90,
+        modul: 6,
+        countRating: 75,
+        buy: "150.000",
+        rent: "200.000",
+        duration: "6 weeks",
+        module: '6 modules',
+        prerequisites: "Basic HTML knowledge",
+        certification: "CSS Basic Certificate",
+        presenter: "Kevin Dzaky",
+        jobPresenter: "Front-End Developer",
+        descPresenter: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel augue nec velit fringilla auctor.",
+        benefits: [
+            "Hands-on CSS projects",
+            "Understanding CSS frameworks",
+            "Job placement assistance",
+            "Access to community resources"
+        ],
+        modul: [
+            {
+                "moduleTitle": "Module 1: Introduction to CSS",
+                "moduleDescription": "Learn the fundamentals of CSS and how to apply styles.",
+                "videos": 8,
+                "readings": 4,
+                "assignments": 1
+            },
+            {
+                "moduleTitle": "Module 2: CSS Box Model",
+                "moduleDescription": "Understand the box model and how to use it effectively.",
+                "videos": 10,
+                "readings": 5,
+                "assignments": 2
+            },
+            {
+                "moduleTitle": "Module 3: CSS Flexbox",
+                "moduleDescription": "Learn to use Flexbox for responsive layouts.",
                 "videos": 9,
                 "readings": 4,
                 "assignments": 1
