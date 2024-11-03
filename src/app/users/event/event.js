@@ -13,7 +13,7 @@ export function Event() {
             </div>
 
             <div className='w-full py-10'>
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {DataJson.DataEvent.map((item) => (
                         <a href="#" key={item.id} className="flex flex-col items-center bg-transparent hover:shadow-md rounded-lg shadow p-6">
                             <div className='flex mb-5'>
