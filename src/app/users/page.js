@@ -6,7 +6,7 @@ import { Competition } from './competition/competition';
 
 export default function User() {
     const [activePage, setActivePage] = useState("data");
-
+    // console.log(activePage);
     const renderPage = () => {
         switch (activePage) {
             case "data":
@@ -37,7 +37,7 @@ export default function User() {
             name: 'Competition',
             // icon: <FaUser className='size-4' />,
             onClick: () => setActivePage('competition'),
-            button: "competition'),"
+            button: "competition"
         },
     ]
 

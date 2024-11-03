@@ -1,0 +1,14 @@
+{
+    "DataEvent": [
+        {
+            "id": 1,
+            "img": "/profile/competition/event1.jpg",
+            "title": "Game Development Chalenge 2025",
+            "organizer": "Universitas Indonesia",
+            "time": "2024-12-31 00:00:00",
+            "location": "Online",
+            "quota": "2000",
+            "description": "Join us in this FREE event on Sunday, September 18, 2024, from 09:00 AM to 12:00 PM WIB, streamed live on YouTube."
+        }
+    ]
+}

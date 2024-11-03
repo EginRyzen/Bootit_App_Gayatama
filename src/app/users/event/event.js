@@ -8,8 +8,8 @@ import DataJson from './data.json';
 export function Event() {
     return (
         <div className='w-full flex flex-col py-10'>
-            <div className='text-[#3a3f47] text-lg sm:text-3xl font-medium'>
-                Setelan
+            <div className='text-[#3a3f47] text-lg sm:text-3xl font-medium capitalize'>
+                meet participation
             </div>
 
             <div className='w-full py-10'>
