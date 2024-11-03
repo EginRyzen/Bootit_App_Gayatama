@@ -1,5 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
+import { IoIosTimer } from "react-icons/io";
+import { IoLocationOutline } from "react-icons/io5";
+import { FaUsers } from "react-icons/fa";
+import DataJson from './data.json';
 
 export function Event() {
     return (
@@ -9,26 +13,27 @@ export function Event() {
             </div>
 
             <div className='w-full py-10'>
-                <div className="grid grid-cols-2 gap-4">
-
-                    <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
-                        <div className='flex'>
-                            <Image className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/peofile/event/event1.jpg" alt="img" width={200} height={200} />
-                            <div className="flex flex-col justify-between p-4 leading-normal">
-                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <div className="grid grid-cols-2 gap-8">
+                    {DataJson.DataEvent.map((item) => (
+                        <a href="#" key={item.id} className="flex flex-col items-center bg-transparent hover:shadow-md rounded-lg shadow p-6">
+                            <div className='flex mb-5'>
+                                <Image className="object-cover w-full rounded-t-lg h-72 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg " src={item.img} alt="img" width={100} height={100} />
+                                <div className="flex flex-col leading-normal ml-5">
+                                    <div className='text-slate-800 font-medium text-md mb-2'>{item.title}</div>
+                                    <div className='text-gray-400 font-normal mb-1 text-xs'>
+                                        Hosted by : {item.organizer}</div>
+                                    <div className='text-gray-400 font-medium mb-3 flex items-center'><IoIosTimer className='mr-1 h-4 w-4' /> <span className='text-xs'>{item.time}</span></div>
+                                    <div className='flex'>
+                                        <div className='text-gray-500 font-normal mb-3 flex items-end mr-5 my-2'><IoLocationOutline className='mr-1 h-4 w-4' /> <span className='text-xs'>{item.location}</span></div>
+                                        <div className='text-gray-500 font-normal mb-3 flex items-end my-2'><FaUsers className='mr-1 h-4 w-4' /> <span className='text-xs'>Quota : {item.quota}</span></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-
-                    <div >2</div>
-                    <div >5</div>
-                    <div >6</div>
-                    <div >7</div>
-                    <div >8</div>
-                    <div >9</div>
-                    <div >10</div>
+                            <div className='w-full'>
+                                <p className="font-normal text-xs text-gray-500">{item.description}</p>
+                            </div>
+                        </a>
+                    ))}
                 </div>
             </div>
 

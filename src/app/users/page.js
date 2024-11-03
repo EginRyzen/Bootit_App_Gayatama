@@ -28,7 +28,7 @@ export default function User() {
             button: "data"
         },
         {
-            name: 'Event',
+            name: 'Event Meet',
             // icon: <FaUser className='size-4' />,
             onClick: () => setActivePage('event'),
             button: "event"

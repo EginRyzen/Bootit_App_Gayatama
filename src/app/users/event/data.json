@@ -1,0 +1,34 @@
+{
+    "DataEvent": [
+        {
+            "id": 1,
+            "img": "/profile/event/event1.png",
+            "title": "Web Development Bootcamp: Build Modern Websites",
+            "organizer": "Dicoding",
+            "time": "Coming Soon",
+            "location": "Online",
+            "quota": "2000",
+            "description": "Join us in this FREE event on Sunday, September 18, 2024, from 09:00 AM to 12:00 PM WIB, streamed live on YouTube."
+        },
+        {
+            "id": 2,
+            "img": "/profile/event/event1.png",
+            "title": "Web Development Bootcamp: Build Modern Websites",
+            "organizer": "Dicoding",
+            "time": "Coming Soon",
+            "location": "Online",
+            "quota": "2000",
+            "description": "Join us in this FREE event on Sunday, September 18, 2024, from 09:00 AM to 12:00 PM WIB, streamed live on YouTube."
+        },
+        {
+            "id": 3,
+            "img": "/profile/event/event1.png",
+            "title": "Web Development Bootcamp: Build Modern Websites",
+            "organizer": "Dicoding",
+            "time": "Coming Soon",
+            "location": "Online",
+            "quota": "2000",
+            "description": "Join us in this FREE event on Sunday, September 18, 2024, from 09:00 AM to 12:00 PM WIB, streamed live on YouTube."
+        }
+    ]
+}
