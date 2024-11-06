@@ -12,6 +12,7 @@ import { GiMaterialsScience } from "react-icons/gi";
 import { LuBrainCircuit } from "react-icons/lu";
 import { FaMicrochip } from "react-icons/fa6";
 import { IoLogoAndroid } from "react-icons/io";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export default function Navbar() {
   const [scrollDirection, setScrollDirection] = useState(null);
@@ -20,25 +21,27 @@ export default function Navbar() {
   const [isOpenModalRegister, setIsOpenModalRegister] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 
+  const auth = getAuth();
+
   useEffect(() => {
-    const loggedInStatus = sessionStorage.getItem("isLogin") === "true";
-    setIsLogin(loggedInStatus);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsLogin(!!user); // Update status login berdasarkan ada atau tidaknya user
+    });
+
+    return () => unsubscribe();
   }, []);
-
-  const IsloggedIn = () => {
-    setIsLogin(true);
-    sessionStorage.setItem("isLogin", "true");
-    setIsOpenModalLogin(false);
-  };
-
-  const IsLoggedout = () => {
-    setIsLogin(false);
-    sessionStorage.removeItem("isLogin");
-  };
 
   const openModalLogin = () => {
     setIsOpenModalLogin(true);
     setIsOpenModalRegister(false);
+  };
+
+  const IsLoggedout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
   };
 
   const openModalRegister = () => {
@@ -138,12 +141,8 @@ export default function Navbar() {
   ];
   return (
     <>
-      <nav
-        className={`backdrop-blur-3xl bg-white/30 sticky shadow z-50 h-16 md:h-20 ${
-          scrollDirection === "down" ? "-top-20" : "top-0"
-        } ransition-all duration-500`}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className={`backdrop-blur-md bg-white/30 sticky shadow z-50 h-16 md:h-20 ${scrollDirection === "down" ? "-top-20" : "top-0"} ransition-all duration-500`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex items-center">
               <div className="flex -ml-2">
@@ -235,7 +234,7 @@ export default function Navbar() {
         isOpenModalLogin={isOpenModalLogin}
         closeModalLogin={closeModalLogin}
         openModalRegister={openModalRegister}
-        IsloggedIn={IsloggedIn}
+        IsloggedIn={isLogin}
       />
       <ModalRegister
         openModalLogin={openModalLogin}
