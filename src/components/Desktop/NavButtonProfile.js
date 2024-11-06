@@ -16,7 +16,7 @@ function NavButtonProfile({ openModalRegister, openModalLogin, isLogin, IsLogged
                                 alt="user photo"
                             />
                             <IoIosArrowUp className="ml-1 my-auto transform transition-transform duration-300 group-hover:rotate-180" />
-                            <div className="dropdown-menu w-[150px] absolute left-0 mt-5 pt-4 max-h-0 opacity-0 transform -translate-y-5 transition-all duration-500 ease-in-out overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0">
+                            <div className="dropdown-menu w-[150px] absolute -left-20 mt-5 pt-4 max-h-0 opacity-0 transform -translate-y-5 transition-all duration-500 ease-in-out overflow-hidden group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0">
                                 <div className="bg-white border border-gray-200 rounded-md shadow py-2">
                                     <div className="w-auto">
                                         <a href="/users">

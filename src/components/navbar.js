@@ -158,7 +158,6 @@ export default function Navbar() {
                         </div>
 
                         {/* Mobile Tampilan */}
-
                         <div className="-mr-2 flex gap-2 py-2 lg:hidden">
                             {/* Profile Menu Mobile */}
                             <NavProfile isLogin={isLogin} IsLoggedout={IsLoggedout} />
