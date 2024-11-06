@@ -1,7 +1,5 @@
 export const Data = {
-    title: "Event List",
-    description: "List of Ongoing Events",
-    'dataMeetup': [
+    dataMeetup: [
         {
             id: 1,
             img: "/img/cardmeetup/meet up-4.png",

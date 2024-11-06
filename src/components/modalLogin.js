@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, IsloggedIn }) {
@@ -16,7 +17,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, Islo
                         }`}
                 >
                     {/* Modal content */}
-                    <div className="relative bg-white rounded-md shadow">
+                    <div className="relative backdrop-blur-xl bg-white/50 rounded-sm shadow">
                         {/* Modal header */}
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600">
                             <h3 className="text-lg font-medium text-[#3d3d3d]">Sign in to our platform</h3>
@@ -59,7 +60,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, Islo
                                         type="email"
                                         name="email"
                                         id="email"
-                                        className="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-400"
+                                        className="bg-transparent border border-gray-500 text-gray-900 text-sm rounded-lg block w-full p-2.5 placeholder-gray-500 focus:ring-2 focus:ring-slate-400 focus:ring-offset-0 focus:border-slate-400 outline-none"
                                         placeholder="name@company.com"
                                         required
                                     />
@@ -76,7 +77,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, Islo
                                         name="password"
                                         id="password"
                                         placeholder="••••••••"
-                                        className="bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-400"
+                                        className="bg-transparent border border-gray-500 text-gray-900 text-sm rounded-lg block w-full p-2.5 placeholder-gray-500 focus:ring-2 focus:ring-slate-400 focus:ring-offset-0 focus:border-slate-400 outline-none"
                                         required
                                     />
                                 </div>
@@ -86,7 +87,7 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, Islo
                                             <input
                                                 id="remember"
                                                 type="checkbox"
-                                                className="w-4 h-4 border rounded focus:ring-3 bg-gray-600 border-gray-500 focus:ring-blue-600 ring-offset-gray-800 focus:ring-offset-gray-800"
+                                                className="w-4 h-4 border rounded focus:ring-3 bg-transparent border-gray-500 focus:ring-blue-600 ring-offset-gray-800 focus:ring-offset-gray-800"
                                                 required
                                             />
                                         </div>
@@ -111,17 +112,17 @@ function ModalLogin({ isOpenModalLogin, closeModalLogin, openModalRegister, Islo
 
                                 <div className="flex justify-center gap-5 items-center">
                                     <div className='w-2/5'>
-                                    <hr/>
+                                        <hr />
                                     </div>
-                                <div className="text-sm text-center font-medium text-[#3d3d3d]">Atau</div>
-                                <div className='w-2/5'>
-                                    <hr/>
-                                </div>
+                                    <div className="text-sm text-center font-medium text-[#3d3d3d]">Atau</div>
+                                    <div className='w-2/5'>
+                                        <hr />
+                                    </div>
                                 </div>
 
                                 <button onClick={IsloggedIn} type="button" className="text-gray-900 bg-gray-100 w-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center gap-2 items-center dark:focus:ring-gray-500 me-2 mb-2">
                                     <div>
-                                        <img src="https://d17ivq9b7rppb3.cloudfront.net/original/commons/sso-google-v3.svg" alt="Logo Google" />
+                                        <Image src="/googleicon1.png" width={25} height={25} alt="Logo Google" />
                                     </div>
                                     Sign in with Google
                                 </button>

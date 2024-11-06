@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="bg-white">
+        <footer className="backdrop-blur-sm bg-white/20">
             <hr />
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 <div className="md:flex md:justify-between">
@@ -30,10 +30,10 @@ function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-[#3a3f47] uppercase">Follow us</h2>
                             <ul className="text-[#3a3f47] font-normal">
                                 <li className="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
+                                    <a href="#" className="hover:underline ">Github</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                                    <a href="#" className="hover:underline">Discord</a>
                                 </li>
                             </ul>
                         </div>
